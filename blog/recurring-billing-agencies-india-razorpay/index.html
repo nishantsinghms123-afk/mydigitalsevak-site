@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSGKNS7J31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BSGKNS7J31');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Recurring Billing for Indian Agencies: The Razorpay Setup</title>
+<meta name="description" content="How to put agency retainers on autopilot with Razorpay — UPI Autopay vs e-NACH vs card mandates, the Rs 15,000 AFA wall, and why TDS breaks auto-debit." />
+<link rel="canonical" href="https://mydigitalsevak.in/blog/recurring-billing-agencies-india-razorpay/" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta property="og:title" content="Recurring Billing for Indian Agencies: The Razorpay Setup" />
+<meta property="og:description" content="UPI Autopay vs e-NACH vs card mandates for agency retainers, the Rs 15,000 AFA wall, and why TDS quietly breaks auto-debit for B2B clients." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mydigitalsevak.in/blog/recurring-billing-agencies-india-razorpay/" />
+<meta property="og:site_name" content="My Digital Sevak" />
+<meta property="og:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Recurring Billing for Indian Agencies: The Razorpay Setup" />
+<meta name="twitter:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Recurring Billing for Indian Agencies: The Razorpay Setup",
+  "description": "How to put agency retainers on autopilot with Razorpay — UPI Autopay vs e-NACH vs card mandates, the Rs 15,000 AFA wall, and why TDS breaks auto-debit.",
+  "datePublished": "2026-08-19",
+  "dateModified": "2026-08-19",
+  "author": { "@type": "Person", "name": "Nishant Singh", "url": "https://mydigitalsevak.in/about/", "jobTitle": "Founder, My Digital Sevak", "email": "nishant@advancemediasolution.com" },
+  "publisher": { "@type": "Organization", "name": "My Digital Sevak", "logo": { "@type": "ImageObject", "url": "https://mydigitalsevak.in/assets/icon-512.png" } },
+  "mainEntityOfPage": "https://mydigitalsevak.in/blog/recurring-billing-agencies-india-razorpay/",
+  "image": "https://mydigitalsevak.in/assets/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mydigitalsevak.in/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mydigitalsevak.in/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Recurring Billing for Indian Agencies", "item": "https://mydigitalsevak.in/blog/recurring-billing-agencies-india-razorpay/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I auto-debit a monthly agency retainer in India?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only within limits. Under RBI's e-mandate framework, recurring debits above Rs 15,000 need an additional factor of authentication each time, so card and UPI Autopay mandates stop being hands-free above that. Larger retainers need an e-NACH bank mandate, which Razorpay supports up to Rs 10 lakh per debit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does TDS break recurring auto-debit for agencies?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A mandate debits one fixed amount. A corporate client deducting TDS pays you the invoice value minus the deduction, and they decide the rate and section, not you. So the mandate amount and the amount the client believes it owes disagree every single month, which is why TDS-deducting clients belong on auto-invoicing rather than auto-debit." }
+    },
+    {
+      "@type": "Question",
+      "name": "When must a retainer invoice be issued under GST?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A retainer running longer than three months with periodic payment obligations is a continuous supply of services. Where the contract fixes payment dates, the invoice must be issued on or before that due date. Where it does not, the invoice is due before or at the time you receive payment." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Razorpay charge for subscriptions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Razorpay's public pricing page lists standard domestic payment gateway at 2% per successful transaction, subscription billing on cards at 0.9% plus platform fees per transaction, and UPI and NACH subscription pricing available on request. Setup fee and annual maintenance are both listed at Rs 0, with 18% GST on the platform fee." }
+    }
+  ]
+}
+</script>
+<!-- Fontshare: Clash Display + Satoshi -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0A0A0B;--bg2:#0E0E11;--surface:rgba(255,255,255,.03);--border:rgba(255,255,255,.09);
+--ink:#F4F4F6;--ink2:rgba(255,255,255,.82);--ink3:rgba(255,255,255,.6);
+--brand:#ff00ee;--brand-light:#FF66F5;--brand-wash:rgba(255,0,238,.12);--cyan:#46E0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Satoshi',system-ui,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:800px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .in{max-width:1060px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+nav a.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+nav a.brand img{width:34px;height:34px;border-radius:9px}
+nav .links{display:flex;gap:22px;align-items:center}
+nav .links a{color:var(--ink3);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--brand-light)}
+.btn{display:inline-block;background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;font-weight:700;
+padding:13px 26px;border-radius:12px;text-decoration:none;box-shadow:0 6px 30px rgba(255,0,238,.35)}
+header.hero{padding:80px 0 40px;position:relative;overflow:hidden}
+.glow{position:absolute;width:720px;height:720px;border-radius:50%;top:-380px;right:-220px;pointer-events:none;
+background:radial-gradient(circle,rgba(255,0,238,.18) 0%,rgba(255,0,238,0) 62%)}
+.crumb{font-size:14px;color:var(--ink3);margin-bottom:18px}
+.crumb a{color:var(--ink3);text-decoration:none}
+.byline{font-size:14.5px;color:var(--ink3);margin-top:16px}
+.byline b{color:var(--ink2)}
+h1{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(30px,4.8vw,46px);line-height:1.12;letter-spacing:-.5px}
+h2{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(23px,3.2vw,30px);line-height:1.2;margin:56px 0 16px}
+h3{font-family:'Clash Display',sans-serif;font-weight:600;font-size:19px;margin:30px 0 8px}
+p{margin-bottom:16px;color:var(--ink2)}
+a{color:var(--brand-light)}
+.answer{background:var(--brand-wash);border:1px solid rgba(255,0,238,.25);border-radius:14px;padding:20px 22px;margin:20px 0;color:var(--ink)}
+ul.list,ol.list{margin:0 0 18px 22px;color:var(--ink2)}
+ul.list li,ol.list li{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14.5px}
+th,td{text-align:left;padding:11px 12px;border:1px solid var(--border);vertical-align:top}
+th{background:var(--surface);font-weight:700;color:var(--ink)}
+td{color:var(--ink2)}
+.twrap{overflow-x:auto}
+.shot{margin:28px 0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--surface)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:13.5px;color:var(--ink3);padding:10px 16px;border-top:1px solid var(--border)}
+.faq{border-top:1px solid var(--border)}
+.faq h3{margin:0;padding:20px 0 8px;font-size:18px}
+.faq p{color:var(--ink3);padding-bottom:12px;border-bottom:1px solid var(--border)}
+.cta{margin:64px 0;background:linear-gradient(140deg,rgba(255,0,238,.16),rgba(70,224,255,.07));border:1px solid rgba(255,0,238,.3);
+border-radius:20px;padding:40px 32px;text-align:center}
+.cta h2{margin:0 0 12px}
+.cta p{color:var(--ink2);margin-bottom:24px}
+footer{border-top:1px solid var(--border);margin-top:80px;padding:34px 0;font-size:14px;color:var(--ink3)}
+footer .in{max-width:1060px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink3);text-decoration:none;margin-right:16px}
+@media(max-width:640px){nav .links a.hideS{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="brand" href="/"><img src="/assets/icon-192.png" alt="My Digital Sevak logo" /><span>My Digital Sevak</span></a>
+  <div class="links">
+    <a href="/agency-management-software/" class="hideS">Agency Software</a>
+    <a href="/features/instagram-scheduler/" class="hideS">Instagram Scheduler</a>
+    <a class="btn" href="/app/#signup">Start Free Trial</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="glow"></div><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / <a href="/blog/">Blog</a></div>
+  <h1>Recurring billing for Indian agencies: what Razorpay can and can't automate</h1>
+  <p class="byline">By <b><a href="/about/" style="color:inherit;text-decoration:none">Nishant Singh</a></b>, founder of My Digital Sevak — after billing retainers across 63+ brands · Published <b>August 19, 2026</b></p>
+</div></header>
+
+<main class="wrap">
+
+<div class="answer">
+  <p style="margin:0"><b>Short answer:</b> Razorpay can genuinely auto-debit an Indian retainer, but only under Rs 15,000 per cycle on cards or UPI Autopay — above that, RBI's e-mandate rules force an authentication step every month. Bigger retainers need an e-NACH bank mandate, and any client who deducts TDS can't be auto-debited at all. Most agencies should automate the <em>invoice</em>, not the debit.</p>
+</div>
+
+<p>Every agency founder has the same fantasy around the 1st of the month: the retainers just land. No "sir, invoice bhej dijiye" on WhatsApp, no follow-up on the 12th, no reconciling six part-payments against five invoices.</p>
+
+<p>Razorpay Subscriptions is the tool everyone reaches for. It's a good product, and the mechanics are simple — <a href="https://razorpay.com/docs/payments/subscriptions/" rel="nofollow">per Razorpay's own docs</a>, you "create a plan with your pricing and billing schedule, then create a subscription for customers," and Razorpay "automatically charges them at regular intervals," with invoices "automatically generated for every billing cycle," plus trial periods, upfront charges, add-ons, and pause/cancel.</p>
+
+<p>What none of the setup guides tell you is that the Indian regulatory layer and the Indian tax layer both bite an agency in ways they don't bite a SaaS company. I've run both models. Here's what actually happens.</p>
+
+<h2>What does recurring billing actually mean for an agency retainer?</h2>
+
+<p>Two very different things get called "recurring billing," and conflating them is why founders get disappointed:</p>
+
+<ul class="list">
+  <li><b>Auto-invoicing</b> — on a fixed day each month the invoice is generated, numbered in sequence, GST and TDS computed, emailed to the client with a payment link. The client still initiates payment. Effort saved: yours.</li>
+  <li><b>Auto-debit (mandates)</b> — the client authorises a standing instruction once, and money leaves their account each cycle with no action from them. Effort saved: theirs.</li>
+</ul>
+
+<p>Auto-invoicing works for 100% of Indian clients. Auto-debit works for a surprisingly small slice of them. Everything below is about finding that slice honestly instead of discovering it three clients into a failed rollout.</p>
+
+<h2>Which Razorpay mandate can actually collect your retainer?</h2>
+
+<p>Razorpay Subscriptions supports three rails — cards (standing instructions on Visa, Mastercard and RuPay), UPI Autopay, and e-mandate/NACH (authorised via netbanking, debit card or Aadhaar). They are not interchangeable. The numbers below come from <a href="https://razorpay.com/blog/cheapest-payment-gateway-for-recurring-billing-e-nach-upi-autopay-and-subscription/" rel="nofollow">Razorpay's own recurring-billing cost breakdown</a> and its <a href="https://razorpay.com/pricing/" rel="nofollow">public pricing page</a> (checked 19 August 2026 — verify before you quote them to a client, pricing moves).</p>
+
+<div class="twrap">
+<table>
+<thead><tr><th>Rail</th><th>Limit per debit</th><th>Setup time</th><th>Cost</th><th>Best fit for an agency</th></tr></thead>
+<tbody>
+<tr><td><b>UPI Autopay</b></td><td>Rs 15,000 standard mandate limit (higher category limits exist for SIPs, insurance and IPOs — not for services)</td><td>Instant, in the client's UPI app</td><td>"Pricing available on request" for subscription UPI</td><td>Small local retainers, D2C founders, add-on services</td></tr>
+<tr><td><b>Card standing instruction</b></td><td>Rs 15,000 without extra authentication</td><td>Instant</td><td>"0.9% + Platform fees per transaction"</td><td>Rarely worth it — Indian B2B clients don't want the company card on file</td></tr>
+<tr><td><b>e-NACH</b></td><td>Rs 10 lakh per debit</td><td>1 to 5 working days to register the mandate</td><td>"Pricing available on request"</td><td>Larger retainers from clients who do <em>not</em> deduct TDS</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Razorpay lists setup fee and annual maintenance charge at Rs 0, with 18% GST on the platform fee and custom rates available above Rs 5,00,000 monthly volume. So the fixed cost of trying this is genuinely zero — the cost is entirely in your time and your client's patience.</p>
+
+<h2>The Rs 15,000 wall — and why most agency retainers hit it</h2>
+
+<p>This is the single fact that decides whether auto-debit is viable for you, and almost no "how to set up Razorpay subscriptions" article mentions it.</p>
+
+<p>RBI consolidated its rules in the <a href="https://taxguru.in/rbi/rbi-issues-consolidated-directions-digital-payments-e-mandate-framework-2026.html" rel="nofollow">Digital Payments – E-mandate Framework, 2026</a>, issued 21 April 2026. Recurring debits go through without an additional factor of authentication (AFA) only "up to Rs 15,000/- per transaction." Above that, the customer has to authenticate the debit — which means an OTP prompt lands on their phone every single month, and a missed OTP is a missed collection.</p>
+
+<p>There <em>is</em> a Rs 1,00,000 ceiling in the framework — but it applies specifically to "payment of insurance premiums, subscription to mutual funds, and credit card bill payments." A social media retainer is none of those. Agencies read the headline "RBI raises e-mandate limit to Rs 1 lakh," assume it applies to them, and build a rollout on it. It does not.</p>
+
+<p>Now do the arithmetic on a normal retainer. Even a modest Rs 20,000/month engagement bills at Rs 23,600 with 18% GST. If you're anywhere near the rates in our <a href="/blog/how-much-charge-social-media-management-india/">India rate-card breakdown</a> — Rs 35,000 to Rs 1,50,000 in metros — you clear the Rs 15,000 line before you finish reading the plan setup screen. Only the smallest engagements, and per-service add-ons, live below it.</p>
+
+<p>Two more provisions worth knowing because they'll show up in client questions: the issuer must send a pre-transaction notification "at least 24 hours prior to the actual charge / debit," and must give the customer a facility to "modify the validity period or withdraw the e-mandate at any point of time." Your client can kill the mandate silently, from their bank app, without telling you. Treat a mandate as convenience, never as security.</p>
+
+<h2>Why TDS quietly breaks auto-debit for B2B clients</h2>
+
+<p>Here's the part I've never seen written down anywhere, and it's the reason my own agency abandoned mandates for corporate clients.</p>
+
+<p>A mandate debits <b>one fixed amount</b>. A client deducting TDS pays you the invoice value <b>minus</b> their deduction — and <em>they</em> decide the rate and the section, not you.</p>
+
+<p>Take a Rs 50,000/month retainer. The arithmetic (this is arithmetic, not a survey):</p>
+
+<ul class="list">
+  <li>Invoice: Rs 50,000 + 18% GST = <b>Rs 59,000</b></li>
+  <li>Client deducts TDS on the base value, not on GST — at 10% for professional fees that's <b>Rs 5,000</b></li>
+  <li>Client remits <b>Rs 54,000</b>, and deposits Rs 5,000 with the government against your PAN</li>
+</ul>
+
+<p>Set the mandate to Rs 59,000 and you over-collect by Rs 5,000 every month, and now the client owes nothing to the exchequer but has paid you in full — a mess for both books. Set it to Rs 54,000 and the mandate is wrong the moment that client's classification changes, or the moment a different client applies 2% instead of 10%. And you frequently don't know which rate a client will apply until the first payment lands. (If that split isn't second nature yet, our <a href="/blog/tds-on-digital-marketing-services/">guide to TDS on digital marketing services</a> covers which section applies and why the numbering changed.)</p>
+
+<p>Mandates assume a fixed amount. Indian B2B invoicing assumes a variable one. That mismatch is structural, and no amount of Razorpay configuration fixes it.</p>
+
+<h2>When must the invoice go out? GST timing for retainers</h2>
+
+<p>Automating the debit is optional. Automating the invoice date is not — GST has an opinion about it.</p>
+
+<p>A retainer contracted for a period exceeding three months with periodic payment obligations is a <b>continuous supply of services</b>. Under the time-of-supply rules (<a href="https://tallysolutions.com/gst/time-of-issue-of-invoice-in-continuous-supply-under-gst/" rel="nofollow">summarised well by Tally here</a>), where the contract fixes payment dates, the invoice must be issued on or before that due date; where it doesn't, the invoice must be issued before or at the time you receive payment.</p>
+
+<p>The practical translation for agencies: <b>write the payment date into the retainer agreement</b>, then issue on that date whether or not the client has "confirmed the month." Founders who wait for confirmation end up issuing on the 14th for a 5th-of-month due date, which is late by the rulebook and messy in GSTR-1. Our <a href="/blog/social-media-retainer-agreement-india/">retainer agreement guide</a> has the clause; our <a href="/blog/gst-invoice-digital-marketing-services/">GST invoice guide</a> has what the invoice itself must carry.</p>
+
+<h2>The setup I'd actually run</h2>
+
+<p>After trying the pure-mandate version and watching it fail on exactly the clients whose money mattered most, this is the three-track model I'd give any Indian agency:</p>
+
+<ol class="list">
+  <li><b>Track A — auto-debit, under Rs 15,000 all-in.</b> UPI Autopay only. Perfect for a Rs 10,000/month starter package, a Rs 5,000 reels-only add-on, or the tier-2 clients that a <a href="/agencies/indore/">tier-2 agency</a> often bills in bulk. Instant setup in the client's own UPI app, no bank paperwork, and at that ticket size clients rarely deduct TDS.</li>
+  <li><b>Track B — e-NACH, above Rs 15,000, non-TDS clients only.</b> Proprietorships, small partnerships, D2C brands below audit thresholds. Budget 1 to 5 working days for mandate registration and start it during onboarding, not on the 1st.</li>
+  <li><b>Track C — auto-invoice plus payment link, everyone else.</b> Every corporate client, every client who deducts TDS, every retainer above Rs 50,000. The invoice issues itself on the contracted date, GST and TDS are computed on it, it emails itself, and it carries a Razorpay link so the client can pay in two taps. You've automated your side completely; the client keeps control of theirs, which is what a finance department wants anyway.</li>
+</ol>
+
+<p>Track C is where most of your revenue will sit, and it's worth saying plainly: that isn't a failure of automation. The manual work in agency billing was never the debit. It was raising 14 invoices, getting the serial numbers right, computing GST and TDS per client, emailing them, and then chasing them. All of that automates fine.</p>
+
+<figure class="shot">
+  <img src="/assets/dark-settings.png" alt="Agency billing workspace showing recurring invoice settings, GST and TDS configuration for client retainers" loading="lazy" />
+  <figcaption>Recurring billing set up per client — billing day, GST treatment and TDS handling saved once, then issued automatically each cycle.</figcaption>
+</figure>
+
+<p>This is the model <a href="/agency-management-software/">My Digital Sevak</a> runs, and I'll be specific about the boundary since I built it: a daily job generates each client's invoice on their billing day, applies their GST and TDS settings, emails it along with the previous month's performance report, and tracks the TDS deducted so your receivables reconcile. It does <em>not</em> operate mandates on your behalf — for the reasons above, we send a Razorpay payment link instead. If you want true auto-debit for your Track A and Track B clients, set those up directly in the Razorpay dashboard.</p>
+
+<h2>Five things to get right before your first cycle</h2>
+
+<ul class="list">
+  <li><b>Number the retainers, not the sends.</b> One unbroken invoice serial per financial year, generated by the system. A recurring job that skips or duplicates a number will surface as a GSTR-1 mismatch months later.</li>
+  <li><b>Bill on a date, not on a mood.</b> Same day every month, written into the contract. Payment drift is one of the earliest signals that <a href="/blog/reduce-agency-client-churn/">a client is drifting away</a> — but only if the billing date is fixed enough for drift to be visible.</li>
+  <li><b>Send the report with the invoice.</b> An invoice arriving alone invites scrutiny; an invoice arriving attached to last month's reach, engagement and published-post count invites payment. Costs nothing to pair them.</li>
+  <li><b>Decide the TDS treatment at onboarding.</b> Ask during <a href="/blog/onboard-new-social-media-client/">client onboarding</a> whether they'll deduct and under which section. Saves a quarter of confused reconciliation.</li>
+  <li><b>Have a chase ladder ready anyway.</b> Automation reduces late payment; it doesn't end it. Our <a href="/blog/handle-late-paying-agency-clients/">escalation ladder and MSME 45-day rule breakdown</a> is what runs after the automated reminder fails.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+
+<div class="faq">
+  <h3>Can I auto-debit a monthly agency retainer in India?</h3>
+  <p>Yes, but only within limits. Under RBI's e-mandate framework, recurring debits above Rs 15,000 need an additional factor of authentication each time, so card and UPI Autopay mandates stop being hands-free above that. Larger retainers need an e-NACH bank mandate, which Razorpay supports up to Rs 10 lakh per debit.</p>
+
+  <h3>Why does TDS break recurring auto-debit for agencies?</h3>
+  <p>A mandate debits one fixed amount. A corporate client deducting TDS pays you the invoice value minus the deduction, and they decide the rate and section, not you. So the mandate amount and the amount the client believes it owes disagree every single month, which is why TDS-deducting clients belong on auto-invoicing rather than auto-debit.</p>
+
+  <h3>When must a retainer invoice be issued under GST?</h3>
+  <p>A retainer running longer than three months with periodic payment obligations is a continuous supply of services. Where the contract fixes payment dates, the invoice must be issued on or before that due date. Where it does not, the invoice is due before or at the time you receive payment.</p>
+
+  <h3>What does Razorpay charge for subscriptions?</h3>
+  <p>Razorpay's public pricing page lists standard domestic payment gateway at 2% per successful transaction, subscription billing on cards at 0.9% plus platform fees per transaction, and UPI and NACH subscription pricing available on request. Setup fee and annual maintenance are both listed at Rs 0, with 18% GST on the platform fee.</p>
+</div>
+
+<div class="cta">
+  <h2>Let the invoices raise themselves.</h2>
+  <p>Recurring invoices on each client's billing day, with GST and TDS computed, the monthly report attached, and a Razorpay link inside — alongside your content calendar, approvals and <a href="/features/instagram-scheduler/">Instagram scheduling</a>. 7-day free trial, from ₹999/month for your whole team.</p>
+  <a class="btn" href="/app/#signup">Start Free Trial</a>
+</div>
+</main>
+
+<footer><div class="in">
+  <span>© 2026 Advance Media Solution · Rudrapur, Uttarakhand</span>
+  <span>
+    <a href="/">Home</a><a href="/agency-management-software/">Agency Management Software</a>
+    <a href="/features/instagram-scheduler/">Instagram Scheduler</a><a href="/blog/">Blog</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+  </span>
+</div></footer>
+</body>
+</html>
