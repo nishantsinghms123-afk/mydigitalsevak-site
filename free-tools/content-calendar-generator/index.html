@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSGKNS7J31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BSGKNS7J31');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+<title>Free Content Calendar Generator (CSV for Google Sheets)</title>
+<meta name="description" content="Generate a monthly social media content calendar: platforms, posts per week, format mix, days off. Download a CSV for Google Sheets or Excel, or print." />
+<link rel="canonical" href="https://mydigitalsevak.in/free-tools/content-calendar-generator/" />
+<meta property="og:title" content="Free Content Calendar Generator (CSV for Google Sheets)" />
+<meta property="og:description" content="Generate a monthly social media content calendar: platforms, posts per week, format mix, days off. Download a CSV for Google Sheets or Excel, or print." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mydigitalsevak.in/free-tools/content-calendar-generator/" />
+<meta property="og:site_name" content="My Digital Sevak" />
+<meta property="og:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free Content Calendar Generator (CSV for Google Sheets)" />
+<meta name="twitter:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mydigitalsevak.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Free tools",
+      "item": "https://mydigitalsevak.in/free-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Content Calendar Generator",
+      "item": "https://mydigitalsevak.in/free-tools/content-calendar-generator/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://mydigitalsevak.in/free-tools/content-calendar-generator/#app",
+  "name": "Content Calendar Generator",
+  "url": "https://mydigitalsevak.in/free-tools/content-calendar-generator/",
+  "description": "Generate a monthly social media content calendar: platforms, posts per week, format mix, days off. Download a CSV for Google Sheets or Excel, or print.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (runs in a web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "featureList": [
+    "Evenly spaced posts per week",
+    "Reel / carousel / static format mix",
+    "Skip weekdays and specific dates",
+    "Rotating content pillars",
+    "CSV export for Google Sheets and Excel",
+    "Printable month view"
+  ],
+  "publisher": {
+    "@id": "https://mydigitalsevak.in/#org"
+  },
+  "isPartOf": {
+    "@id": "https://mydigitalsevak.in/#website"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many posts per week should I plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no universal number. Plan a frequency your team can deliver every week at the same quality. Consistency matters more than volume, and you can raise the number next month once the workflow holds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the CSV work in Google Sheets and Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It is a standard comma-separated file saved as UTF-8 with a byte-order mark. In Google Sheets use File, Import, Upload. In Excel, open the file directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the generator spread posts across the month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It works out a monthly total from your posts per week and the length of the month, then splits it across the calendar weeks in proportion to how many postable (not skipped) days each week has. Inside each week, posts go on evenly spaced days that you haven't skipped. If skipped days leave a week too full, the extra posts carry into the next week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I skip festivals or holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Type the day numbers into \"Skip specific dates\", for example 2, 15, 26, and those dates stay empty. Whole weekdays, such as Sundays, can be skipped with the day checkboxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my calendar saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calendar and the CSV are generated in your browser. Nothing is uploaded, and nothing is kept after you close the page unless you download the CSV."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#0A0A0B;--bg2:#0E0E11;--surface:rgba(255,255,255,.03);--border:rgba(255,255,255,.09);
+--ink:#F4F4F6;--ink2:rgba(255,255,255,.82);--ink3:rgba(255,255,255,.6);
+--brand:#ff00ee;--brand-light:#FF66F5;--brand-wash:rgba(255,0,238,.12);--cyan:#46E0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Satoshi',system-ui,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .in{max-width:1060px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+nav a.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+nav a.brand img{width:34px;height:34px;border-radius:9px}
+nav .links{display:flex;gap:22px;align-items:center}
+nav .links a{color:var(--ink3);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--brand-light)}
+.btn{display:inline-block;background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;font-weight:700;
+padding:13px 26px;border-radius:12px;text-decoration:none;box-shadow:0 6px 30px rgba(255,0,238,.35)}
+.btn.ghost{background:var(--surface);border:1px solid var(--border);box-shadow:none;color:var(--ink2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+header.hero{padding:92px 0 44px;position:relative;overflow:hidden}
+.glow{position:absolute;width:720px;height:720px;border-radius:50%;top:-380px;right:-220px;pointer-events:none;
+background:radial-gradient(circle,rgba(255,0,238,.2) 0%,rgba(255,0,238,0) 62%)}
+.crumb{font-size:14px;color:var(--ink3);margin-bottom:18px}
+.crumb a{color:var(--ink3);text-decoration:none}
+h1{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(30px,4.8vw,46px);line-height:1.12;letter-spacing:-.5px;margin-bottom:16px}
+h1 .m{background:linear-gradient(100deg,#FF9AF3,var(--brand-light) 50%,var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:19px;color:var(--ink2)}
+h2{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(23px,3.2vw,30px);line-height:1.2;margin:54px 0 16px}
+h3{font-family:'Clash Display',sans-serif;font-weight:600;font-size:19px;margin:28px 0 8px}
+p{margin-bottom:16px;color:var(--ink2)}
+a{color:var(--brand-light)}
+.answer{background:var(--brand-wash);border:1px solid rgba(255,0,238,.25);border-radius:14px;padding:20px 22px;margin:20px 0;color:var(--ink)}
+ul.list{margin:0 0 18px 22px;color:var(--ink2)}
+ul.list li{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15.5px}
+th,td{text-align:left;padding:12px 14px;border:1px solid var(--border);vertical-align:top}
+th{background:var(--surface);font-weight:700;color:var(--ink)}
+td{color:var(--ink2)}
+.twrap{overflow-x:auto}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.chip{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:8px 16px;font-size:14.5px;color:var(--ink2)}
+.faq{border-top:1px solid var(--border)}
+.faq h3{margin:0;padding:20px 0 8px;font-size:18px}
+.faq p{color:var(--ink3);padding-bottom:12px;border-bottom:1px solid var(--border)}
+.cta{margin:64px 0;background:linear-gradient(140deg,rgba(255,0,238,.16),rgba(70,224,255,.07));border:1px solid rgba(255,0,238,.3);
+border-radius:20px;padding:40px 32px;text-align:center}
+.cta h2{margin:0 0 12px}
+.cta p{color:var(--ink2);margin-bottom:24px}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin:30px 0}
+.pcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;transition:border-color .2s}
+.pcard:hover{border-color:rgba(255,0,238,.4)}
+.pcard a{text-decoration:none}
+.pcard h3{margin:0 0 8px;font-size:19px}
+.pcard .date{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.pcard p{font-size:15px;color:var(--ink3);margin:0}
+footer{border-top:1px solid var(--border);margin-top:80px;padding:34px 0;font-size:14px;color:var(--ink3)}
+footer .in{max-width:1060px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink3);text-decoration:none;margin-right:16px}
+footer a:hover{color:var(--brand-light)}
+@media(max-width:640px){nav .links a.hideS{display:none}}
+.viz-split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin:26px 0}
+@media(max-width:860px){.viz-split{grid-template-columns:1fr}}
+.frame{border:1px solid rgba(255,255,255,.13);border-radius:16px;background:#0D0D10;overflow:hidden;
+box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 70px rgba(255,0,238,.14)}
+.frame .fbar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08)}
+.frame .fbar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16)}
+.frame .fbar i:nth-child(1){background:rgba(255,95,86,.75)}
+.frame .fbar i:nth-child(2){background:rgba(255,189,46,.75)}
+.frame .fbar i:nth-child(3){background:rgba(39,201,63,.7)}
+.frame .fbar span{margin-left:8px;font-size:11.5px;color:var(--ink3);letter-spacing:.3px}
+.frame img{display:block;width:100%;height:auto}
+.phone{width:min(290px,88%);margin:0 auto;border:1.5px solid rgba(255,255,255,.15);border-radius:34px;background:#0D0D10;padding:12px;
+box-shadow:0 26px 70px rgba(0,0,0,.55),0 0 60px rgba(255,0,238,.12)}
+.phone .pnotch{width:86px;height:5px;border-radius:99px;background:rgba(255,255,255,.14);margin:2px auto 12px}
+.phone .papp{font-size:11px;color:var(--ink3);text-align:center;margin-bottom:10px;letter-spacing:.4px}
+.phone .post{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.02)}
+.phone .thumb{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:38px;
+background:radial-gradient(120% 120% at 20% 10%,rgba(255,0,238,.28),transparent 55%),radial-gradient(120% 120% at 90% 90%,rgba(70,224,255,.16),transparent 55%),#141317}
+.phone .pmeta{padding:12px 14px 4px}
+.phone .pmeta b{display:block;font-size:13.5px}
+.phone .pmeta small{color:var(--ink3);font-size:11.5px}
+.phone .pact{display:flex;gap:8px;padding:12px 14px 16px}
+.phone .pa{flex:1;text-align:center;font-size:12.5px;font-weight:700;padding:10px 0;border-radius:10px}
+.phone .pa.yes{background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;box-shadow:0 4px 18px rgba(255,0,238,.35)}
+.phone .pa.no{border:1px solid var(--border);color:var(--ink2)}
+.phone .pdone{margin:10px auto 4px;width:max-content;font-size:11.5px;color:#7CFFB2;border:1px solid rgba(124,255,178,.3);background:rgba(124,255,178,.08);border-radius:99px;padding:5px 12px}
+.viz-cap{font-size:13px;color:var(--ink3);text-align:center;margin-top:14px}
+
+main.tools,header.hero .wrap{max-width:960px}
+.trust{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink2);background:rgba(124,255,178,.06);border:1px solid rgba(124,255,178,.22);border-radius:12px;padding:12px 16px;margin:18px 0}
+.tool{background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:24px;margin:30px 0}
+.tool fieldset{border:0;margin:0 0 24px;padding:0;min-width:0}
+.tool legend{font-family:'Clash Display',sans-serif;font-weight:600;font-size:18px;margin-bottom:12px;color:var(--ink);padding:0}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:14px;font-weight:500;color:var(--ink2)}
+.tool input[type=text],.tool input[type=number],.tool input[type=date],.tool input[type=time],.tool select,.tool textarea{width:100%;min-width:0;background:#141317;border:1px solid rgba(255,255,255,.14);color:var(--ink);border-radius:10px;padding:10px 12px;font:inherit;font-size:15.5px;line-height:1.4}
+.tool input:disabled{opacity:.45}
+.tool textarea{resize:vertical}
+.tool input:focus-visible,.tool select:focus-visible,.tool textarea:focus-visible,.tool button:focus-visible,.check:focus-within,.radio:focus-within{outline:2px solid var(--brand-light);outline-offset:2px}
+.tool select option{background:#141317;color:var(--ink)}
+.tool input[type=date],.tool input[type=time]{color-scheme:dark}
+.hint{font-size:13px;color:var(--ink3);font-weight:400}
+.msg{font-size:13px;margin:0}
+.msg.ok{color:#7CFFB2}.msg.err{color:#FF8A9A}.msg.warn{color:#FFD27A}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.check{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:8px 14px;font-size:14.5px;color:var(--ink2);cursor:pointer}
+.check input{accent-color:var(--brand);width:16px;height:16px;margin:0}
+button.btn{font:inherit;font-weight:700;border:0;cursor:pointer}
+button.btn.ghost{border:1px solid var(--border)}
+.btn.sm{padding:9px 16px;font-size:14px;border-radius:10px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+ol.list{margin:0 0 18px 22px;color:var(--ink2)}
+ol.list li{margin-bottom:10px}
+.sources li{font-size:15px}
+.toolcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px;margin:30px 0}
+.toolcards .pcard{padding:0;display:flex}
+.toolcards .pcard a{display:flex;flex-direction:column;padding:24px;width:100%;color:inherit}
+.toolcards .pcard h3{color:var(--brand-light)}
+.toolcards .pcard p{flex:1;margin-bottom:20px}
+.toolcards .open{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:#fff;
+background:linear-gradient(100deg,var(--brand),var(--brand-light));padding:10px 18px;border-radius:10px;box-shadow:0 4px 16px rgba(255,0,238,.25);transition:transform .15s}
+.toolcards .pcard{transition:border-color .2s,transform .2s,box-shadow .2s}
+.toolcards .pcard:hover{transform:translateY(-3px);border-color:rgba(255,0,238,.45)}
+.toolcards .pcard:hover .open{transform:translateX(3px)}
+.toolcards .pcard a:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px;border-radius:16px}
+@media(max-width:480px){.wrap{padding:0 16px}.tool{padding:18px 14px;border-radius:14px}.cta{padding:30px 18px}}
+.cal-out{margin-top:22px}
+.cal-sum{font-size:15px;color:var(--ink2);margin:0 0 12px}
+.cal-title{font-family:'Clash Display',sans-serif;font-weight:600;font-size:22px;margin:0 0 4px;color:var(--ink)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cal-grid .dh{font-size:12px;font-weight:700;color:var(--ink3);text-align:center;padding:4px 0;letter-spacing:.4px;text-transform:uppercase}
+.cal-grid .cell{min-height:92px;border:1px solid var(--border);background:var(--surface);border-radius:10px;padding:6px 7px;font-size:12.5px;min-width:0}
+.cal-grid .cell.blank{background:transparent;border-color:transparent}
+.cal-grid .cell.skip{background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 6px,transparent 6px 12px)}
+.cal-grid .dn{font-weight:700;color:var(--ink2);font-size:13px}
+.cal-grid .cell.skip .dn{color:var(--ink3)}
+.fmt{display:inline-block;border-radius:6px;padding:2px 7px;font-size:11.5px;font-weight:700;margin-top:4px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fmt.Reel{background:rgba(255,0,238,.18);color:#FF9AF3}
+.fmt.Carousel{background:rgba(70,224,255,.15);color:#8CEBFF}
+.fmt.Static{background:rgba(255,210,122,.15);color:#FFD27A}
+.cal-grid .pl{display:block;color:var(--ink3);font-size:11px;margin-top:3px;overflow-wrap:anywhere}
+.cal-list{display:none;list-style:none;margin:0;padding:0}
+.cal-list li{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--border);padding:10px 2px}
+.cal-list .ld{font-weight:700;min-width:84px;color:var(--ink);font-size:14.5px}
+.cal-list .lx{font-size:14px;color:var(--ink2);min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.cal-out .cal-grid{display:none}.cal-out .cal-list{display:block}}
+#print-root{display:none}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  html,body{background:#fff!important;color:#111!important}
+  body>*:not(#print-root){display:none!important}
+  #print-root{display:block!important}
+  #print-root .cal-grid{display:grid!important}
+  #print-root .cal-list,#print-root .noprint{display:none!important}
+  #print-root .cal-title,#print-root .cal-sum,#print-root .dn,#print-root .pl,#print-root .dh{color:#111!important}
+  #print-root .cell{border:1px solid #bbb!important;background:#fff!important;min-height:80px}
+  #print-root .cell.blank{border-color:transparent!important}
+  #print-root .fmt{border:1px solid #888;color:#111!important;background:#fff!important}
+}
+
+:root{--bg:#FFFFFF;--bg2:#FFFFFF;--surface:rgba(22,22,26,.035);--border:rgba(22,22,26,.12);
+--ink:#16161A;--ink2:rgba(22,22,26,.8);--ink3:rgba(22,22,26,.6);--brand-light:#A8009C;--brand-wash:rgba(255,0,238,.06);color-scheme:light}
+body{background:#FAF9FB}
+nav{background:rgba(255,255,255,.9)}
+a{color:#A8009C}
+.glow{background:radial-gradient(circle,rgba(255,0,238,.09) 0%,rgba(255,0,238,0) 62%)}
+h1 .m{background:linear-gradient(100deg,var(--brand),#A8009C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{box-shadow:0 6px 24px rgba(255,0,238,.22)}
+nav .links a.btn,.cta a.btn:not(.ghost){color:#fff}
+.btn.ghost{background:#fff;color:var(--ink)}
+.answer{border-color:rgba(255,0,238,.22)}
+.cta{background:linear-gradient(140deg,rgba(255,0,238,.07),rgba(70,224,255,.06));border-color:rgba(255,0,238,.22)}
+.tool,.pcard{background:#fff;box-shadow:0 1px 2px rgba(22,22,26,.04),0 10px 30px rgba(22,22,26,.06)}
+.tool input[type=text],.tool input[type=number],.tool input[type=date],.tool input[type=time],.tool select,.tool textarea{background:#fff;border-color:rgba(22,22,26,.2)}
+.tool select option{background:#fff;color:var(--ink)}
+.tool input[type=date],.tool input[type=time]{color-scheme:light}
+.check{background:#fff}
+.trust{background:rgba(10,122,62,.06);border-color:rgba(10,122,62,.25)}
+.msg.ok{color:#0A7A3E}.msg.err{color:#C21F3A}.msg.warn{color:#8A5A00}
+.cal-grid .cell.skip{background:repeating-linear-gradient(135deg,rgba(22,22,26,.04) 0 6px,transparent 6px 12px)}
+.fmt.Reel{background:rgba(255,0,238,.1);color:#A8009C}
+.fmt.Carousel{background:rgba(0,140,180,.1);color:#00627D}
+.fmt.Static{background:rgba(200,140,0,.13);color:#7A4F00}
+.result{background:rgba(255,0,238,.05)}
+.paper{border:1px solid #e6e4ea;box-shadow:0 10px 40px rgba(22,22,26,.1)}
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="brand" href="/"><img src="/assets/icon-192.png" alt="My Digital Sevak logo" /><span>My Digital Sevak</span></a>
+  <div class="links">
+    <a href="/#features" class="hideS">Features</a>
+    <a href="/agency-management-software/" class="hideS">Agency Software</a>
+    <a href="/blog/" class="hideS">Blog</a>
+    <a href="/free-tools/" class="hideS">Free tools</a>
+    <a href="#demo" class="hideS" data-book-demo="tool-content-calendar-generator-nav">Book a demo</a>
+    <a class="btn" href="/app/#signup">Get started</a>
+  </div>
+</div></nav>
+<header class="hero"><div class="glow"></div><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / <a href="/free-tools/">Free tools</a> / Content Calendar Generator</div>
+  <h1>Free social media<br><span class="m">content calendar generator.</span></h1>
+  <p class="lede">Choose the month, platforms, posts per week, format mix and days to skip. You get an evenly spread calendar on screen, a CSV for Google Sheets or Excel, and a printable month view.</p>
+</div></header>
+<main class="wrap tools">
+  <h2 style="margin-top:28px">How do you make a social media content calendar?</h2>
+  <div class="answer">Decide how many times a week you'll post, which platforms you'll post on and your mix of formats (reels, carousels, static posts). Block out the days and dates you won't post. Then spread the posts evenly across the month and give each one a format and a content pillar. This generator does that layout in one click, and exports a CSV you can open in Google Sheets or Excel or hand to your team.</div>
+  <div class="trust" role="note"><span aria-hidden="true">🔒</span><span><b>Your plan stays on your device.</b> The calendar and CSV are built in your browser, and nothing is uploaded or stored. (The page uses Google Analytics for anonymous page-view counts, like the rest of this site.)</span></div>
+
+  <section class="tool" id="tool" aria-labelledby="tool-h">
+    <h2 id="tool-h" style="margin-top:0">Generate your calendar</h2>
+    <form id="calForm" novalidate onsubmit="return false">
+      <fieldset>
+        <legend>Month</legend>
+        <div class="fgrid">
+          <div class="f"><label for="month">Month</label><select id="month"></select></div>
+          <div class="f"><label for="year">Year</label><input type="number" id="year" min="2000" max="2100" step="1" inputmode="numeric" /></div>
+          <div class="f"><label for="perWeek">Posts per week</label><input type="number" id="perWeek" min="1" max="7" step="1" value="4" inputmode="numeric" /></div>
+          <div class="f"><label for="time">Posting time <span class="hint">(optional)</span></label><input type="time" id="time" /></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Platforms</legend>
+        <div class="checks" id="platforms">
+          <label class="check"><input type="checkbox" value="Instagram" checked /> Instagram</label>
+          <label class="check"><input type="checkbox" value="Facebook" checked /> Facebook</label>
+          <label class="check"><input type="checkbox" value="LinkedIn" /> LinkedIn</label>
+          <label class="check"><input type="checkbox" value="YouTube" /> YouTube</label>
+          <label class="check"><input type="checkbox" value="X" /> X (Twitter)</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Format mix</legend>
+        <p class="hint" style="margin:-4px 0 12px">Relative weights. They don't need to add up to 100.</p>
+        <div class="fgrid">
+          <div class="f"><label for="wReel">Reels</label><input type="number" id="wReel" min="0" max="100" step="1" value="40" inputmode="numeric" /></div>
+          <div class="f"><label for="wCarousel">Carousels</label><input type="number" id="wCarousel" min="0" max="100" step="1" value="30" inputmode="numeric" /></div>
+          <div class="f"><label for="wStatic">Static posts</label><input type="number" id="wStatic" min="0" max="100" step="1" value="30" inputmode="numeric" /></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Days to skip</legend>
+        <div class="checks" id="skipDow">
+          <label class="check"><input type="checkbox" value="1" /> Mon</label>
+          <label class="check"><input type="checkbox" value="2" /> Tue</label>
+          <label class="check"><input type="checkbox" value="3" /> Wed</label>
+          <label class="check"><input type="checkbox" value="4" /> Thu</label>
+          <label class="check"><input type="checkbox" value="5" /> Fri</label>
+          <label class="check"><input type="checkbox" value="6" /> Sat</label>
+          <label class="check"><input type="checkbox" value="0" /> Sun</label>
+        </div>
+        <div class="fgrid" style="margin-top:14px">
+          <div class="f"><label for="skipDates">Skip specific dates <span class="hint">(day numbers, comma-separated)</span></label><input type="text" id="skipDates" placeholder="e.g. 2, 15, 26" inputmode="numeric" aria-describedby="skipMsg" /><span class="msg" id="skipMsg" aria-live="polite"></span></div>
+          <div class="f"><label for="pillars">Content pillars <span class="hint">(optional, comma-separated)</span></label><input type="text" id="pillars" placeholder="e.g. Product, Behind the scenes, Offers, Reviews" /></div>
+        </div>
+      </fieldset>
+      <div class="actions">
+        <button type="button" class="btn" id="csvBtn">Download CSV</button>
+        <button type="button" class="btn ghost" id="printBtn">Print</button>
+      </div>
+    </form>
+    <div class="cal-out" id="calOut" aria-live="polite"></div>
+  </section>
+
+  <h2>How to use the content calendar generator</h2>
+  <ol class="list">
+    <li><b>Pick the month and year</b>, and how many posts a week you can produce consistently.</li>
+    <li><b>Tick the platforms.</b> Each post is planned as a cross-post to all of them. Delete platforms per row in the sheet if a post is platform-specific.</li>
+    <li><b>Set the format mix.</b> With weights of 40 / 30 / 30, about 40% of posts become reels. Formats are interleaved so you don't get three reels in a row.</li>
+    <li><b>Skip days and dates:</b> weekends, festivals, launch-day blackouts, the client's holidays. Posts move to the remaining days in that week, and carry into the next week if a week is full.</li>
+    <li><b>Add content pillars</b> (optional) and they rotate through the month.</li>
+    <li><b>Download the CSV</b> and fill in topics and captions with your team, or print the month for a planning meeting.</li>
+  </ol>
+
+  <h2>Opening the CSV in Google Sheets or Excel</h2>
+  <ul class="list">
+    <li><b>Google Sheets:</b> File → Import → Upload, choose the downloaded file, then pick "Insert new sheet(s)" or "Replace current sheet".</li>
+    <li><b>Excel:</b> open the file directly. It is saved as UTF-8 with a byte-order mark, so ₹ and non-English pillar names display correctly.</li>
+    <li>Columns: Date, Day, Time, Platforms, Format, Content pillar, Topic / hook, Caption, Status. Topic, caption and status are left for your team to fill in.</li>
+  </ul>
+  <p>A spreadsheet is a fine place to start. Once you're running calendars for several clients, approvals and publishing are where sheets start to break down. We compared the two in <a href="/blog/google-sheets-vs-content-calendar-software/">Google Sheets vs content calendar software</a>.</p>
+
+  <h2>Related guides</h2>
+  <ul class="list">
+    <li><a href="/blog/ai-content-calendar-generator-social-media/">AI content calendar generators for social media</a></li>
+    <li><a href="/blog/bulk-schedule-month-instagram-content/">How to bulk-schedule a month of Instagram content</a></li>
+    <li><a href="/blog/best-time-to-post-instagram-india/">Best time to post on Instagram in India</a></li>
+    <li><a href="/blog/social-media-content-approval-workflow-template/">Social media content approval workflow template</a></li>
+    <li><a href="/blog/google-sheets-vs-content-calendar-software/">Google Sheets vs content calendar software</a></li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <h3>How many posts per week should I plan?</h3>
+    <p>There is no universal number. Plan a frequency your team can deliver every week at the same quality. Consistency matters more than volume, and you can raise the number next month once the workflow holds.</p>
+    <h3>Does the CSV work in Google Sheets and Excel?</h3>
+    <p>Yes. It is a standard comma-separated file saved as UTF-8 with a byte-order mark. In Google Sheets use File, Import, Upload. In Excel, open the file directly.</p>
+    <h3>How does the generator spread posts across the month?</h3>
+    <p>It works out a monthly total from your posts per week and the length of the month, then splits it across the calendar weeks in proportion to how many postable (not skipped) days each week has. Inside each week, posts go on evenly spaced days that you haven&#x27;t skipped. If skipped days leave a week too full, the extra posts carry into the next week.</p>
+    <h3>Can I skip festivals or holidays?</h3>
+    <p>Yes. Type the day numbers into &quot;Skip specific dates&quot;, for example 2, 15, 26, and those dates stay empty. Whole weekdays, such as Sundays, can be skipped with the day checkboxes.</p>
+    <h3>Is my calendar saved anywhere?</h3>
+    <p>No. The calendar and the CSV are generated in your browser. Nothing is uploaded, and nothing is kept after you close the page unless you download the CSV.</p>
+  </div>
+
+  <div class="cta">
+    <h2>From spreadsheet to scheduled posts.</h2>
+    <p>In My Digital Sevak, the calendar your team plans becomes posts your clients approve in one tap, and those posts publish themselves on schedule. From ₹999/month.</p>
+    <div class="cta-row"><a class="btn" href="/app/#signup">Get started</a><a href="#demo" class="btn ghost" data-book-demo="tool-content-calendar-generator-cta">Book a demo</a></div>
+  </div>
+  <p style="text-align:center"><a href="/free-tools/">← All free tools</a></p>
+</main>
+<footer><div class="in">
+  <span>© 2026 Advance Media Solution · Rudrapur, Uttarakhand</span>
+  <span>
+    <a href="/">Home</a><a href="/about/">About</a><a href="/agency-management-software/">Agency Software</a>
+    <a href="/features/instagram-scheduler/">Instagram Scheduler</a><a href="/blog/">Blog</a>
+    <a href="/free-tools/">Free tools</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+  </span>
+</div></footer>
+<script src="/app/demo.js?v=1" defer></script>
+<script>
+/* pure:start */
+var CAL = (function () {
+  var DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var DOWL = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var FORMATS = ["Reel", "Carousel", "Static post"];
+  function pad(n) { return String(n).padStart(2, "0"); }
+  function daysIn(y, m) { return new Date(y, m, 0).getDate(); }
+  function parseDates(s, max) {
+    var ok = [], bad = [];
+    String(s || "").split(/[,\s]+/).filter(Boolean).forEach(function (t) {
+      var n = Number(t);
+      if (Number.isInteger(n) && n >= 1 && n <= max) { if (ok.indexOf(n) < 0) ok.push(n); } else bad.push(t);
+    });
+    return { ok: ok.sort(function (a, b) { return a - b; }), bad: bad };
+  }
+  function build(o) {
+    var y = +o.year, m = +o.month, dim = daysIn(y, m);
+    var perWeek = Math.max(1, Math.min(7, Math.round(+o.perWeek || 1)));
+    var skipDow = (o.skipDow || []).map(Number), skipDates = o.skipDates || [];
+    var days = [];
+    for (var d = 1; d <= dim; d++) {
+      var dow = new Date(y, m - 1, d).getDay();
+      days.push({ d: d, dow: dow, date: y + "-" + pad(m) + "-" + pad(d), skipped: skipDow.indexOf(dow) >= 0 || skipDates.indexOf(d) >= 0, post: null });
+    }
+    // Monday-start weeks
+    var weeks = [], cur = [];
+    days.forEach(function (x) { if (x.dow === 1 && cur.length) { weeks.push(cur); cur = []; } cur.push(x); });
+    if (cur.length) weeks.push(cur);
+    var total = Math.round(perWeek * dim / 7);
+    // largest-remainder split of the monthly total across weeks, weighted by each
+    // week's postable (not skipped) days so a skipped stub week doesn't push its
+    // share into the next week
+    var wts = weeks.map(function (w) { return w.filter(function (x) { return !x.skipped; }).length; });
+    var wsumDays = wts.reduce(function (a, b) { return a + b; }, 0);
+    if (!wsumDays) { wts = weeks.map(function (w) { return w.length; }); wsumDays = dim; }
+    var raw = wts.map(function (k) { return total * k / wsumDays; });
+    var alloc = raw.map(Math.floor), left = total - alloc.reduce(function (a, b) { return a + b; }, 0);
+    raw.map(function (r, i) { return [r - Math.floor(r), i]; }).sort(function (a, b) { return b[0] - a[0] || a[1] - b[1]; })
+      .slice(0, left).forEach(function (p) { alloc[p[1]]++; });
+    var carry = 0, chosen = [];
+    weeks.forEach(function (w, wi) {
+      var want = alloc[wi] + carry, avail = w.filter(function (x) { return !x.skipped; });
+      var t = Math.min(want, avail.length, 7);
+      for (var i = 0; i < t; i++) chosen.push(avail[Math.floor((i + 0.5) * avail.length / t)]);
+      carry = want - t;
+    });
+    // smooth weighted round-robin keeps the format mix interleaved
+    var w = [Math.max(0, +o.mix[0] || 0), Math.max(0, +o.mix[1] || 0), Math.max(0, +o.mix[2] || 0)];
+    var wsum = w[0] + w[1] + w[2];
+    if (!wsum) { w = [0, 0, 1]; wsum = 1; }
+    var cw = [0, 0, 0], pillars = (o.pillars || []).filter(Boolean), plat = (o.platforms || []).join("; ");
+    var posts = chosen.map(function (x, i) {
+      var best = 0;
+      for (var k = 0; k < 3; k++) { cw[k] += w[k]; if (cw[k] > cw[best]) best = k; }
+      cw[best] -= wsum;
+      x.post = { format: FORMATS[best], pillar: pillars.length ? pillars[i % pillars.length] : "", platforms: plat };
+      return { date: x.date, day: DOWL[x.dow], time: o.time || "", platforms: plat, format: FORMATS[best], pillar: x.post.pillar };
+    });
+    return { year: y, month: m, title: MONTHS[m - 1] + " " + y, days: days, posts: posts, target: total, unplaced: carry };
+  }
+  function cell(v) {
+    v = String(v == null ? "" : v);
+    if (/^[=+\-@]/.test(v)) v = "'" + v;
+    return /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+  }
+  function toCSV(posts) {
+    var rows = [["Date", "Day", "Time", "Platforms", "Format", "Content pillar", "Topic / hook", "Caption", "Status"]];
+    posts.forEach(function (p) { rows.push([p.date, p.day, p.time, p.platforms, p.format, p.pillar, "", "", "Planned"]); });
+    return "﻿" + rows.map(function (r) { return r.map(cell).join(","); }).join("\r\n") + "\r\n";
+  }
+  return { DOW: DOW, MONTHS: MONTHS, FORMATS: FORMATS, build: build, toCSV: toCSV, parseDates: parseDates, daysIn: daysIn };
+})();
+/* pure:end */
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var last = null;
+  var now = new Date(), defM = now.getMonth() + 1, defY = now.getFullYear();
+  if (now.getDate() > 15) { defM++; if (defM > 12) { defM = 1; defY++; } }
+  $("month").innerHTML = CAL.MONTHS.map(function (n, i) { return '<option value="' + (i + 1) + '">' + n + "</option>"; }).join("");
+  $("month").value = defM; $("year").value = defY;
+  function checked(sel) { return Array.prototype.map.call(document.querySelectorAll(sel + " input:checked"), function (x) { return x.value; }); }
+  function render() {
+    var y = parseInt($("year").value, 10), m = parseInt($("month").value, 10);
+    if (!(y >= 2000 && y <= 2100)) { $("calOut").innerHTML = '<p class="msg err">Enter a year between 2000 and 2100.</p>'; last = null; return; }
+    var sd = CAL.parseDates($("skipDates").value, CAL.daysIn(y, m));
+    $("skipMsg").textContent = sd.bad.length ? "Ignored: " + sd.bad.join(", ") + " (not a date in this month)." : "";
+    $("skipMsg").className = "msg" + (sd.bad.length ? " warn" : "");
+    var platforms = checked("#platforms");
+    var cal = CAL.build({
+      year: y, month: m, perWeek: $("perWeek").value, time: $("time").value, platforms: platforms,
+      mix: [$("wReel").value, $("wCarousel").value, $("wStatic").value],
+      skipDow: checked("#skipDow"), skipDates: sd.ok,
+      pillars: $("pillars").value.split(",").map(function (s) { return s.trim(); })
+    });
+    last = cal;
+    var counts = {}; cal.posts.forEach(function (p) { counts[p.format] = (counts[p.format] || 0) + 1; });
+    var mixTxt = CAL.FORMATS.filter(function (f) { return counts[f]; }).map(function (f) { return counts[f] + " " + f.toLowerCase() + (counts[f] > 1 ? "s" : ""); }).join(", ");
+    var head = '<p class="cal-title">' + esc(cal.title) + " content calendar</p>" +
+      '<p class="cal-sum">' + cal.posts.length + " posts" + (mixTxt ? " · " + esc(mixTxt) : "") + (platforms.length ? " · " + esc(platforms.join(", ")) : " · no platform selected") + "</p>" +
+      (cal.unplaced ? '<p class="msg warn noprint">' + cal.unplaced + " post" + (cal.unplaced > 1 ? "s" : "") + " didn't fit on the remaining days. Lower posts per week or skip fewer days.</p>" : "");
+    var g = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(function (d) { return '<div class="dh">' + d + "</div>"; }).join("");
+    var lead = (cal.days[0].dow + 6) % 7;
+    for (var i = 0; i < lead; i++) g += '<div class="cell blank" aria-hidden="true"></div>';
+    cal.days.forEach(function (d) {
+      var p = d.post;
+      g += '<div class="cell' + (d.skipped ? " skip" : "") + '"><span class="dn">' + d.d + "</span>" +
+        (p ? '<br><span class="fmt ' + p.format.split(" ")[0] + '">' + esc(p.format) + "</span>" + (p.pillar ? '<span class="pl">' + esc(p.pillar) + "</span>" : "") : "") + "</div>";
+    });
+    var list = cal.posts.map(function (p) {
+      var d = new Date(p.date + "T00:00:00");
+      return '<li><span class="ld">' + CAL.DOW[d.getDay()] + " " + d.getDate() + '</span><span class="lx"><span class="fmt ' + p.format.split(" ")[0] + '">' + esc(p.format) + "</span>" + (p.pillar ? " · " + esc(p.pillar) : "") + (p.time ? " · " + esc(p.time) : "") + "</span></li>";
+    }).join("");
+    $("calOut").innerHTML = head + '<div class="cal-grid" role="group" aria-label="' + esc(cal.title) + ' calendar grid">' + g + '</div><ul class="cal-list">' + (list || "<li>No posts. Check your skipped days.</li>") + "</ul>";
+  }
+  function printCal() {
+    var root = $("print-root");
+    if (!root) { root = document.createElement("div"); root.id = "print-root"; document.body.appendChild(root); }
+    var c = $("calOut").cloneNode(true); c.removeAttribute("id"); root.innerHTML = ""; root.appendChild(c);
+  }
+  $("calForm").addEventListener("input", render);
+  $("calForm").addEventListener("change", render);
+  $("csvBtn").addEventListener("click", function () {
+    if (!last) return;
+    var blob = new Blob([CAL.toCSV(last.posts)], { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "content-calendar-" + last.year + "-" + String(last.month).padStart(2, "0") + ".csv";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  });
+  $("printBtn").addEventListener("click", function () { printCal(); window.print(); });
+  window.addEventListener("beforeprint", printCal);
+  render();
+})();
+</script>
+</body>
+</html>
