@@ -1,0 +1,12 @@
+# Netlify redirects for the combined site.
+# Marketing lives at "/"; the app (dashboard + client portal) lives at "/app/".
+#
+# Pretty entry URLs → the app SPA (hash-routed, so /app/ serves the whole thing).
+/signin     /app/   301
+/login      /app/   301
+/dashboard  /app/   301
+/portal     /app/   301
+/user       /app/   301
+
+# Bare /app → /app/ (so the directory index resolves)
+/app        /app/   301
