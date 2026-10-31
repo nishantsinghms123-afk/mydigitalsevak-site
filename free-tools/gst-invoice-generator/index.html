@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSGKNS7J31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BSGKNS7J31');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+<title>Free GST Invoice Generator for Agencies &amp; Freelancers</title>
+<meta name="description" content="Make a GST tax invoice in your browser: GSTIN check, SAC codes, auto CGST+SGST or IGST, amount in words (lakh/crore), TDS note. Print or save as PDF." />
+<link rel="canonical" href="https://mydigitalsevak.in/free-tools/gst-invoice-generator/" />
+<meta property="og:title" content="Free GST Invoice Generator for Agencies &amp; Freelancers" />
+<meta property="og:description" content="Make a GST tax invoice in your browser: GSTIN check, SAC codes, auto CGST+SGST or IGST, amount in words (lakh/crore), TDS note. Print or save as PDF." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mydigitalsevak.in/free-tools/gst-invoice-generator/" />
+<meta property="og:site_name" content="My Digital Sevak" />
+<meta property="og:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free GST Invoice Generator for Agencies &amp; Freelancers" />
+<meta name="twitter:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mydigitalsevak.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Free tools",
+      "item": "https://mydigitalsevak.in/free-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "GST Invoice Generator",
+      "item": "https://mydigitalsevak.in/free-tools/gst-invoice-generator/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://mydigitalsevak.in/free-tools/gst-invoice-generator/#app",
+  "name": "GST Invoice Generator",
+  "url": "https://mydigitalsevak.in/free-tools/gst-invoice-generator/",
+  "description": "Make a GST tax invoice in your browser: GSTIN check, SAC codes, auto CGST+SGST or IGST, amount in words (lakh/crore), TDS note. Print or save as PDF.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (runs in a web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "featureList": [
+    "GSTIN format and check-digit validation",
+    "Automatic CGST + SGST / UTGST or IGST split from state codes",
+    "SAC code suggestions for agency services",
+    "Amount in words in Indian numbering (lakh, crore)",
+    "Optional TDS note computed on the taxable value",
+    "Print or save as PDF"
+  ],
+  "publisher": {
+    "@id": "https://mydigitalsevak.in/#org"
+  },
+  "isPartOf": {
+    "@id": "https://mydigitalsevak.in/#website"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which SAC code should I use for social media management services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most social media management and digital marketing retainers are billed under SAC 998361, which CBIC's classification describes as \"Advertising services\". SAC 998365 (\"Sale of Internet advertising space\") is for selling online ad space itself, not for your management fee. When in doubt, confirm the classification with your CA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I charge CGST + SGST and when IGST?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Charge CGST + SGST (half the rate each) when your registered state and the place of supply are the same state, and IGST (the full rate) when they are different. For a GST-registered client, the place of supply of most services is the client's location. In Union Territories without a legislature, UTGST replaces SGST."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many characters can a GST invoice number have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to 16 characters under CGST Rule 46(b). It can use letters, numbers, hyphen and slash, must be consecutive, and must be unique for the financial year. A format like INV/2026-27/001 works."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TDS deducted on the GST amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, if GST is shown separately on the invoice. CBDT Circular No. 23/2017 says TDS is then deducted on the amount excluding GST. The TDS note in this generator follows that rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this generator if I am not registered under GST?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An unregistered business cannot charge GST or issue a tax invoice. It issues a bill of supply instead. You can set the GST rate to 0 here to get a plain invoice layout, but check your position with a CA first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool store my invoice or client data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything runs in your browser and nothing is uploaded. If you tick \"remember my agency details\", your own agency details are saved in this browser's local storage only, and you can clear them by unticking the box."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#0A0A0B;--bg2:#0E0E11;--surface:rgba(255,255,255,.03);--border:rgba(255,255,255,.09);
+--ink:#F4F4F6;--ink2:rgba(255,255,255,.82);--ink3:rgba(255,255,255,.6);
+--brand:#ff00ee;--brand-light:#FF66F5;--brand-wash:rgba(255,0,238,.12);--cyan:#46E0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Satoshi',system-ui,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .in{max-width:1060px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+nav a.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+nav a.brand img{width:34px;height:34px;border-radius:9px}
+nav .links{display:flex;gap:22px;align-items:center}
+nav .links a{color:var(--ink3);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--brand-light)}
+.btn{display:inline-block;background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;font-weight:700;
+padding:13px 26px;border-radius:12px;text-decoration:none;box-shadow:0 6px 30px rgba(255,0,238,.35)}
+.btn.ghost{background:var(--surface);border:1px solid var(--border);box-shadow:none;color:var(--ink2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+header.hero{padding:92px 0 44px;position:relative;overflow:hidden}
+.glow{position:absolute;width:720px;height:720px;border-radius:50%;top:-380px;right:-220px;pointer-events:none;
+background:radial-gradient(circle,rgba(255,0,238,.2) 0%,rgba(255,0,238,0) 62%)}
+.crumb{font-size:14px;color:var(--ink3);margin-bottom:18px}
+.crumb a{color:var(--ink3);text-decoration:none}
+h1{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(30px,4.8vw,46px);line-height:1.12;letter-spacing:-.5px;margin-bottom:16px}
+h1 .m{background:linear-gradient(100deg,#FF9AF3,var(--brand-light) 50%,var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:19px;color:var(--ink2)}
+h2{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(23px,3.2vw,30px);line-height:1.2;margin:54px 0 16px}
+h3{font-family:'Clash Display',sans-serif;font-weight:600;font-size:19px;margin:28px 0 8px}
+p{margin-bottom:16px;color:var(--ink2)}
+a{color:var(--brand-light)}
+.answer{background:var(--brand-wash);border:1px solid rgba(255,0,238,.25);border-radius:14px;padding:20px 22px;margin:20px 0;color:var(--ink)}
+ul.list{margin:0 0 18px 22px;color:var(--ink2)}
+ul.list li{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15.5px}
+th,td{text-align:left;padding:12px 14px;border:1px solid var(--border);vertical-align:top}
+th{background:var(--surface);font-weight:700;color:var(--ink)}
+td{color:var(--ink2)}
+.twrap{overflow-x:auto}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.chip{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:8px 16px;font-size:14.5px;color:var(--ink2)}
+.faq{border-top:1px solid var(--border)}
+.faq h3{margin:0;padding:20px 0 8px;font-size:18px}
+.faq p{color:var(--ink3);padding-bottom:12px;border-bottom:1px solid var(--border)}
+.cta{margin:64px 0;background:linear-gradient(140deg,rgba(255,0,238,.16),rgba(70,224,255,.07));border:1px solid rgba(255,0,238,.3);
+border-radius:20px;padding:40px 32px;text-align:center}
+.cta h2{margin:0 0 12px}
+.cta p{color:var(--ink2);margin-bottom:24px}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin:30px 0}
+.pcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;transition:border-color .2s}
+.pcard:hover{border-color:rgba(255,0,238,.4)}
+.pcard a{text-decoration:none}
+.pcard h3{margin:0 0 8px;font-size:19px}
+.pcard .date{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.pcard p{font-size:15px;color:var(--ink3);margin:0}
+footer{border-top:1px solid var(--border);margin-top:80px;padding:34px 0;font-size:14px;color:var(--ink3)}
+footer .in{max-width:1060px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink3);text-decoration:none;margin-right:16px}
+footer a:hover{color:var(--brand-light)}
+@media(max-width:640px){nav .links a.hideS{display:none}}
+.viz-split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin:26px 0}
+@media(max-width:860px){.viz-split{grid-template-columns:1fr}}
+.frame{border:1px solid rgba(255,255,255,.13);border-radius:16px;background:#0D0D10;overflow:hidden;
+box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 70px rgba(255,0,238,.14)}
+.frame .fbar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08)}
+.frame .fbar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16)}
+.frame .fbar i:nth-child(1){background:rgba(255,95,86,.75)}
+.frame .fbar i:nth-child(2){background:rgba(255,189,46,.75)}
+.frame .fbar i:nth-child(3){background:rgba(39,201,63,.7)}
+.frame .fbar span{margin-left:8px;font-size:11.5px;color:var(--ink3);letter-spacing:.3px}
+.frame img{display:block;width:100%;height:auto}
+.phone{width:min(290px,88%);margin:0 auto;border:1.5px solid rgba(255,255,255,.15);border-radius:34px;background:#0D0D10;padding:12px;
+box-shadow:0 26px 70px rgba(0,0,0,.55),0 0 60px rgba(255,0,238,.12)}
+.phone .pnotch{width:86px;height:5px;border-radius:99px;background:rgba(255,255,255,.14);margin:2px auto 12px}
+.phone .papp{font-size:11px;color:var(--ink3);text-align:center;margin-bottom:10px;letter-spacing:.4px}
+.phone .post{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.02)}
+.phone .thumb{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:38px;
+background:radial-gradient(120% 120% at 20% 10%,rgba(255,0,238,.28),transparent 55%),radial-gradient(120% 120% at 90% 90%,rgba(70,224,255,.16),transparent 55%),#141317}
+.phone .pmeta{padding:12px 14px 4px}
+.phone .pmeta b{display:block;font-size:13.5px}
+.phone .pmeta small{color:var(--ink3);font-size:11.5px}
+.phone .pact{display:flex;gap:8px;padding:12px 14px 16px}
+.phone .pa{flex:1;text-align:center;font-size:12.5px;font-weight:700;padding:10px 0;border-radius:10px}
+.phone .pa.yes{background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;box-shadow:0 4px 18px rgba(255,0,238,.35)}
+.phone .pa.no{border:1px solid var(--border);color:var(--ink2)}
+.phone .pdone{margin:10px auto 4px;width:max-content;font-size:11.5px;color:#7CFFB2;border:1px solid rgba(124,255,178,.3);background:rgba(124,255,178,.08);border-radius:99px;padding:5px 12px}
+.viz-cap{font-size:13px;color:var(--ink3);text-align:center;margin-top:14px}
+
+main.tools,header.hero .wrap{max-width:960px}
+.trust{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink2);background:rgba(124,255,178,.06);border:1px solid rgba(124,255,178,.22);border-radius:12px;padding:12px 16px;margin:18px 0}
+.tool{background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:24px;margin:30px 0}
+.tool fieldset{border:0;margin:0 0 24px;padding:0;min-width:0}
+.tool legend{font-family:'Clash Display',sans-serif;font-weight:600;font-size:18px;margin-bottom:12px;color:var(--ink);padding:0}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:14px;font-weight:500;color:var(--ink2)}
+.tool input[type=text],.tool input[type=number],.tool input[type=date],.tool input[type=time],.tool select,.tool textarea{width:100%;min-width:0;background:#141317;border:1px solid rgba(255,255,255,.14);color:var(--ink);border-radius:10px;padding:10px 12px;font:inherit;font-size:15.5px;line-height:1.4}
+.tool input:disabled{opacity:.45}
+.tool textarea{resize:vertical}
+.tool input:focus-visible,.tool select:focus-visible,.tool textarea:focus-visible,.tool button:focus-visible,.check:focus-within,.radio:focus-within{outline:2px solid var(--brand-light);outline-offset:2px}
+.tool select option{background:#141317;color:var(--ink)}
+.tool input[type=date],.tool input[type=time]{color-scheme:dark}
+.hint{font-size:13px;color:var(--ink3);font-weight:400}
+.msg{font-size:13px;margin:0}
+.msg.ok{color:#7CFFB2}.msg.err{color:#FF8A9A}.msg.warn{color:#FFD27A}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.check{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:8px 14px;font-size:14.5px;color:var(--ink2);cursor:pointer}
+.check input{accent-color:var(--brand);width:16px;height:16px;margin:0}
+button.btn{font:inherit;font-weight:700;border:0;cursor:pointer}
+button.btn.ghost{border:1px solid var(--border)}
+.btn.sm{padding:9px 16px;font-size:14px;border-radius:10px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+ol.list{margin:0 0 18px 22px;color:var(--ink2)}
+ol.list li{margin-bottom:10px}
+.sources li{font-size:15px}
+.toolcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px;margin:30px 0}
+.toolcards .pcard{padding:0;display:flex}
+.toolcards .pcard a{display:flex;flex-direction:column;padding:24px;width:100%;color:inherit}
+.toolcards .pcard h3{color:var(--brand-light)}
+.toolcards .pcard p{flex:1;margin-bottom:20px}
+.toolcards .open{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:#fff;
+background:linear-gradient(100deg,var(--brand),var(--brand-light));padding:10px 18px;border-radius:10px;box-shadow:0 4px 16px rgba(255,0,238,.25);transition:transform .15s}
+.toolcards .pcard{transition:border-color .2s,transform .2s,box-shadow .2s}
+.toolcards .pcard:hover{transform:translateY(-3px);border-color:rgba(255,0,238,.45)}
+.toolcards .pcard:hover .open{transform:translateX(3px)}
+.toolcards .pcard a:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px;border-radius:16px}
+@media(max-width:480px){.wrap{padding:0 16px}.tool{padding:18px 14px;border-radius:14px}.cta{padding:30px 18px}}
+.paper{background:#fff;color:#16161a;border-radius:12px;padding:28px;font-family:'Satoshi',system-ui,sans-serif;font-size:13.5px;line-height:1.5;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.paper p{color:#16161a;margin:0}
+.paper .muted{color:#5c5c66}
+.paper .ttl{font-family:'Clash Display',sans-serif;font-weight:600;font-size:22px;letter-spacing:.5px;margin:0 0 4px;color:#16161a}
+.paper .sup{font-weight:700;font-size:16px}
+.paper .inv-top{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:2px solid #16161a;padding-bottom:14px;margin-bottom:14px}
+.paper .meta{min-width:200px}
+.paper .meta div{display:flex;justify-content:space-between;gap:14px}
+.paper .meta b{font-weight:600}
+.paper .parties{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;margin-bottom:6px}
+.paper .lab{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:#5c5c66;margin-bottom:2px}
+.paper .twrap{margin:12px 0}
+.paper table{margin:0;font-size:13px;min-width:520px}
+.paper th,.paper td{border:1px solid #d9d9e0;color:#16161a;padding:7px 9px}
+.paper th{background:#f4f2f6;font-weight:700}
+.paper .num{text-align:right;white-space:nowrap}
+.paper .tot{display:flex;justify-content:flex-end}
+.paper .tot table{min-width:0;width:auto}
+.paper .tot td{border:0;border-bottom:1px solid #ececf0;padding:5px 9px}
+.paper .tot tr.grand td{border-top:2px solid #16161a;border-bottom:2px solid #16161a;font-weight:700;font-size:14.5px}
+.paper .words{margin-top:10px;font-weight:600}
+.paper .note{margin-top:12px;font-size:12.5px;border:1px dashed #c7c7d1;border-radius:8px;padding:9px 11px}
+.paper .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:22px;align-items:flex-end}
+.paper .sign{text-align:right;min-width:200px}
+.paper .sign .line{border-top:1px solid #16161a;margin-top:46px;padding-top:4px;font-size:12px}
+.paper .ph{color:#9a9aa6;font-style:italic}
+.paper pre{font:inherit;white-space:pre-wrap;margin:0}
+.items-ed{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+.item{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1.3fr) minmax(0,.8fr) minmax(0,1.2fr) auto;gap:10px;align-items:end;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px}
+.item .amt{font-size:14px;color:var(--ink2);white-space:nowrap;padding-bottom:10px}
+@media(max-width:720px){.item{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.item .f.desc{grid-column:1/-1}.item .amt{padding-bottom:0}}
+#print-root{display:none}
+@media(max-width:480px){.paper{padding:16px;font-size:12.5px}}
+@media print{
+  @page{size:A4;margin:12mm}
+  html,body{background:#fff!important}
+  body>*:not(#print-root){display:none!important}
+  #print-root{display:block!important}
+  #print-root .paper{box-shadow:none;border-radius:0;padding:0;font-size:12px}
+  #print-root .twrap{overflow:visible}
+  #print-root table{min-width:0}
+  #print-root .ph{visibility:hidden}
+}
+
+:root{--bg:#FFFFFF;--bg2:#FFFFFF;--surface:rgba(22,22,26,.035);--border:rgba(22,22,26,.12);
+--ink:#16161A;--ink2:rgba(22,22,26,.8);--ink3:rgba(22,22,26,.6);--brand-light:#A8009C;--brand-wash:rgba(255,0,238,.06);color-scheme:light}
+body{background:#FAF9FB}
+nav{background:rgba(255,255,255,.9)}
+a{color:#A8009C}
+.glow{background:radial-gradient(circle,rgba(255,0,238,.09) 0%,rgba(255,0,238,0) 62%)}
+h1 .m{background:linear-gradient(100deg,var(--brand),#A8009C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{box-shadow:0 6px 24px rgba(255,0,238,.22)}
+nav .links a.btn,.cta a.btn:not(.ghost){color:#fff}
+.btn.ghost{background:#fff;color:var(--ink)}
+.answer{border-color:rgba(255,0,238,.22)}
+.cta{background:linear-gradient(140deg,rgba(255,0,238,.07),rgba(70,224,255,.06));border-color:rgba(255,0,238,.22)}
+.tool,.pcard{background:#fff;box-shadow:0 1px 2px rgba(22,22,26,.04),0 10px 30px rgba(22,22,26,.06)}
+.tool input[type=text],.tool input[type=number],.tool input[type=date],.tool input[type=time],.tool select,.tool textarea{background:#fff;border-color:rgba(22,22,26,.2)}
+.tool select option{background:#fff;color:var(--ink)}
+.tool input[type=date],.tool input[type=time]{color-scheme:light}
+.check{background:#fff}
+.trust{background:rgba(10,122,62,.06);border-color:rgba(10,122,62,.25)}
+.msg.ok{color:#0A7A3E}.msg.err{color:#C21F3A}.msg.warn{color:#8A5A00}
+.cal-grid .cell.skip{background:repeating-linear-gradient(135deg,rgba(22,22,26,.04) 0 6px,transparent 6px 12px)}
+.fmt.Reel{background:rgba(255,0,238,.1);color:#A8009C}
+.fmt.Carousel{background:rgba(0,140,180,.1);color:#00627D}
+.fmt.Static{background:rgba(200,140,0,.13);color:#7A4F00}
+.result{background:rgba(255,0,238,.05)}
+.paper{border:1px solid #e6e4ea;box-shadow:0 10px 40px rgba(22,22,26,.1)}
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="brand" href="/"><img src="/assets/icon-192.png" alt="My Digital Sevak logo" /><span>My Digital Sevak</span></a>
+  <div class="links">
+    <a href="/#features" class="hideS">Features</a>
+    <a href="/agency-management-software/" class="hideS">Agency Software</a>
+    <a href="/blog/" class="hideS">Blog</a>
+    <a href="/free-tools/" class="hideS">Free tools</a>
+    <a href="#demo" class="hideS" data-book-demo="tool-gst-invoice-generator-nav">Book a demo</a>
+    <a class="btn" href="/app/#signup">Get started</a>
+  </div>
+</div></nav>
+<header class="hero"><div class="glow"></div><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / <a href="/free-tools/">Free tools</a> / GST Invoice Generator</div>
+  <h1>Free GST invoice generator<br><span class="m">for agencies &amp; freelancers.</span></h1>
+  <p class="lede">Create a Rule 46-compliant GST tax invoice for social media and digital marketing services. It validates GSTINs, splits CGST + SGST or IGST from the two states, writes the total in words and prints a clean A4 PDF.</p>
+</div></header>
+<main class="wrap tools">
+  <h2 style="margin-top:28px">What must a GST invoice for agency services include?</h2>
+  <div class="answer">A GST tax invoice for social media or digital marketing services must show your name, address and GSTIN; a unique invoice number (up to 16 characters) and date; the client's name, address and GSTIN; the SAC code and a description of the service; the taxable value; the GST rate and amount, split as <b>CGST + SGST</b> when you and the client are in the same state or <b>IGST</b> when you are in different states; the place of supply; whether reverse charge applies; and your signature (CGST Rule 46). Most social media and digital marketing retainers use SAC <b>998361</b> (Advertising services).</div>
+  <div class="trust" role="note"><span aria-hidden="true">🔒</span><span><b>Your data never leaves your browser.</b> This generator has no server: nothing you type is uploaded, stored or sent anywhere. (Like the rest of this site, the page itself uses Google Analytics for anonymous page-view counts.)</span></div>
+
+  <section class="tool" id="tool" aria-labelledby="tool-h">
+    <h2 id="tool-h" style="margin-top:0">Create your invoice</h2>
+    <form id="gstForm" novalidate onsubmit="return false">
+      <fieldset>
+        <legend>Your agency (supplier)</legend>
+        <div class="fgrid">
+          <div class="f"><label for="sName">Business name</label><input type="text" id="sName" autocomplete="organization" placeholder="e.g. Pixel Pop Media" /></div>
+          <div class="f"><label for="sGstin">GSTIN</label><input type="text" id="sGstin" maxlength="15" autocapitalize="characters" spellcheck="false" placeholder="15 characters, e.g. 05ABCDE1234F1Z5" aria-describedby="sGstinMsg" /><span class="msg" id="sGstinMsg" aria-live="polite"></span></div>
+          <div class="f"><label for="sState">State</label><select id="sState"></select></div>
+          <div class="f"><label for="sContact">Email / phone <span class="hint">(optional)</span></label><input type="text" id="sContact" autocomplete="email" /></div>
+          <div class="f full"><label for="sAddr">Address</label><textarea id="sAddr" rows="2" autocomplete="street-address"></textarea></div>
+          <div class="f full"><label for="sBank">Bank / UPI details for payment <span class="hint">(optional)</span></label><textarea id="sBank" rows="2" placeholder="A/c name, A/c no., IFSC, UPI ID"></textarea></div>
+          <div class="f full"><label class="check" style="align-self:flex-start"><input type="checkbox" id="remember" /> Remember my agency details on this device</label><span class="hint">Saved only in this browser's local storage, never on a server.</span></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Client (recipient)</legend>
+        <div class="fgrid">
+          <div class="f"><label for="cName">Client name</label><input type="text" id="cName" placeholder="e.g. Riya Jewellers Pvt Ltd" /></div>
+          <div class="f"><label for="cGstin">Client GSTIN <span class="hint">(leave blank if unregistered)</span></label><input type="text" id="cGstin" maxlength="15" autocapitalize="characters" spellcheck="false" aria-describedby="cGstinMsg" /><span class="msg" id="cGstinMsg" aria-live="polite"></span></div>
+          <div class="f"><label for="pos">Place of supply (client's state)</label><select id="pos"></select></div>
+          <div class="f full"><label for="cAddr">Client address</label><textarea id="cAddr" rows="2"></textarea></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Invoice details</legend>
+        <div class="fgrid">
+          <div class="f"><label for="invNo">Invoice number</label><input type="text" id="invNo" maxlength="16" spellcheck="false" aria-describedby="invNoMsg" /><span class="msg" id="invNoMsg" aria-live="polite"></span></div>
+          <div class="f"><label for="invDate">Invoice date</label><input type="date" id="invDate" /></div>
+          <div class="f"><label for="dueDate">Due date <span class="hint">(optional)</span></label><input type="date" id="dueDate" /></div>
+          <div class="f"><label for="gstRate">GST rate (%)</label><input type="number" id="gstRate" min="0" max="100" step="0.01" value="18" inputmode="decimal" /></div>
+          <div class="f"><label for="rcm">Tax payable on reverse charge?</label><select id="rcm"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Services (line items)</legend>
+        <datalist id="sacList">
+          <option value="998361">Advertising services</option>
+          <option value="998365">Sale of Internet advertising space</option>
+          <option value="998362">Purchase or sale of advertising space or time, on commission</option>
+          <option value="998382">Advertising and related photography services</option>
+          <option value="998383">Event photography and event videography services</option>
+          <option value="998371">Market research services</option>
+          <option value="998391">Specialty design services</option>
+          <option value="998314">Information technology (IT) design and development services</option>
+        </datalist>
+        <div class="items-ed" id="items"></div>
+        <button type="button" class="btn ghost sm" id="addItem">+ Add a line</button>
+      </fieldset>
+      <fieldset>
+        <legend>TDS and notes</legend>
+        <div class="fgrid">
+          <div class="f"><label class="check" style="align-self:flex-start"><input type="checkbox" id="tdsOn" /> Add a TDS note</label><span class="hint">Shows the TDS your client may deduct and the net amount you'll receive.</span></div>
+          <div class="f"><label for="tdsRate">TDS rate (%)</label><input type="number" id="tdsRate" min="0" max="100" step="0.01" placeholder="e.g. 2" inputmode="decimal" disabled /></div>
+          <div class="f full"><label for="notes">Notes / payment terms <span class="hint">(optional)</span></label><textarea id="notes" rows="2" placeholder="e.g. Payment due within 15 days. Thank you for your business."></textarea></div>
+        </div>
+      </fieldset>
+      <p class="msg warn" id="formMsg" aria-live="polite"></p>
+      <div class="actions">
+        <button type="button" class="btn" id="printBtn">Print / Save as PDF</button>
+        <button type="button" class="btn ghost" id="resetBtn">Start over</button>
+      </div>
+    </form>
+  </section>
+
+  <h2 id="preview-h">Invoice preview</h2>
+  <p class="hint" style="margin-top:-6px">Updates as you type. "Print / Save as PDF" prints only this invoice; in the print dialog choose <b>Save as PDF</b> as the destination.</p>
+  <div class="paper" id="invoice" aria-labelledby="preview-h"></div>
+
+  <h2>How to use this GST invoice generator</h2>
+  <ol class="list">
+    <li><b>Fill in your agency details.</b> Type your GSTIN and the tool checks its 15-character format and check digit, then picks your state from the first two digits. Tick "remember" to keep these on this device for next month.</li>
+    <li><b>Add the client.</b> Enter their GSTIN if they are registered (their state is filled in automatically), or choose the place of supply for an unregistered client.</li>
+    <li><b>Add your services.</b> One line per service, with a SAC code from the list. The rate defaults to 18%; change it only if your CA has told you a different rate applies.</li>
+    <li><b>Check the tax split.</b> Same state as the client gives CGST + SGST (CGST + UTGST in Union Territories without a legislature); different states give IGST. The total is written out in words using lakh and crore.</li>
+    <li><b>Print or save as PDF.</b> The printout contains only the invoice, sized for A4.</li>
+  </ol>
+
+  <h2>Which SAC code should a social media agency use?</h2>
+  <p>Services carry a SAC (Services Accounting Code) the way goods carry HSN. These are the codes in CBIC's official classification scheme that agency work usually falls under. The descriptions below are CBIC's own wording:</p>
+  <div class="twrap"><table>
+    <tr><th>SAC</th><th>CBIC description</th><th>Typical agency line items</th></tr>
+    <tr><td><b>998361</b></td><td>Advertising services</td><td>Social media management retainers, content and campaign creation, influencer campaigns, digital marketing</td></tr>
+    <tr><td><b>998365</b></td><td>Sale of Internet advertising space</td><td>Billing online ad space itself (not your management fee)</td></tr>
+    <tr><td><b>998362</b></td><td>Purchase or sale of advertising space or time, on commission</td><td>Media buying where you earn a commission</td></tr>
+    <tr><td><b>998382</b></td><td>Advertising and related photography services</td><td>Product or brand shoots billed separately</td></tr>
+    <tr><td><b>998383</b></td><td>Event photography and event videography services</td><td>Event coverage</td></tr>
+  </table></div>
+  <p>Which code fits a given contract is a classification question, and it depends on what you actually supply. If you are unsure, ask your CA. The <a href="/blog/gst-invoice-digital-marketing-services/">GST invoice guide for digital marketing services</a> has worked examples.</p>
+
+  <h2>CGST + SGST or IGST?</h2>
+  <p>It depends on two states: where you (the supplier) are registered, and the <b>place of supply</b>. When you bill a GST-registered client, the place of supply for most services is the client's location (Section 12(2), IGST Act, 2017). For an unregistered client it is the client's location if you have their address on record, and otherwise your own location.</p>
+  <ul class="list">
+    <li><b>Same state:</b> the GST rate is split in half, CGST + SGST (for example 9% + 9% at 18%). In Union Territories without a legislature, such as Chandigarh or Ladakh, UTGST replaces SGST.</li>
+    <li><b>Different states:</b> the full rate is charged as IGST (for example 18%).</li>
+  </ul>
+
+  <h2>The invoice fields CGST Rule 46 requires</h2>
+  <p>Rule 46 of the CGST Rules, 2017 lists what a tax invoice must contain. These are the parts that apply to a domestic services invoice. This generator covers each one:</p>
+  <ul class="list">
+    <li>Supplier's name, address and GSTIN (46(a))</li>
+    <li>A consecutive serial number of no more than 16 characters, using only letters, numbers, "-" and "/", unique for the financial year (46(b))</li>
+    <li>Date of issue (46(c))</li>
+    <li>Recipient's name, address and GSTIN if registered (46(d)). For an unregistered recipient, the name, address and state with its code are required when the taxable value is ₹50,000 or more (46(e))</li>
+    <li>HSN code for goods, or the accounting code (SAC) for services (46(g)), and a description (46(h))</li>
+    <li>Total value, and taxable value after any discount (46(j), (k))</li>
+    <li>Rate and amount of tax: central tax, state tax, integrated tax, union territory tax or cess (46(l), (m))</li>
+    <li>Place of supply with the state name, for inter-state supplies (46(n))</li>
+    <li>Whether tax is payable on reverse charge (46(p))</li>
+    <li>Signature or digital signature of the supplier or an authorised representative (46(q)). Electronic invoices issued under the IT Act don't need one</li>
+  </ul>
+  <p>If your turnover means you must issue <b>e-invoices</b>, you also need an IRN and QR code from the Invoice Registration Portal (46(r)). This tool makes a regular tax invoice, not an e-invoice. See <a href="/blog/e-invoicing-rules-digital-marketing-agencies/">e-invoicing rules for digital marketing agencies</a>.</p>
+
+  <h2>Where does TDS fit?</h2>
+  <p>Business clients often deduct TDS before they pay you. When the invoice shows GST separately, TDS is deducted on the amount <b>excluding</b> GST (CBDT Circular No. 23/2017). That is how this tool's TDS note works: it calculates TDS on the taxable value and shows the net amount you can expect. The right section and rate depend on the contract and the client, so <a href="/blog/tds-on-digital-marketing-services/">read the TDS guide for digital marketing services</a> before choosing one.</p>
+
+  <h2>Sources</h2>
+  <ul class="list sources">
+    <li><a href="https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter6/rule46_v1.00.html" rel="nofollow noopener" target="_blank">CBIC: Rule 46, CGST Rules, 2017 (Tax invoice)</a></li>
+    <li><a href="https://cbic-gst.gov.in/pdf/Classification%20Scheme%20for%20Services%20under%20GST.xlsx" rel="nofollow noopener" target="_blank">CBIC: Classification Scheme for Services under GST</a> (SAC group 99836 and codes 998361–998366, 998382–998383)</li>
+    <li><a href="https://cbic-gst.gov.in/pdf/Schedule%20of%20GST%20rates%20for%20services.pdf" rel="nofollow noopener" target="_blank">CBIC: Schedule of GST rates for services as approved by the GST Council</a>. Services not specified elsewhere are taxed at 18%; selling ad space in print media is 5%. Rates can change by notification, so confirm the current rate with your CA.</li>
+    <li>Integrated Goods and Services Tax Act, 2017, Section 12(2): place of supply of services where the supplier and recipient are both in India</li>
+    <li><a href="https://itatonline.org/info/wp-content/uploads/2017/07/CBDT-Circular-23-TDS-GST.pdf" rel="nofollow noopener" target="_blank">CBDT Circular No. 23/2017 (19 July 2017)</a>: no TDS on the GST component when it is shown separately</li>
+  </ul>
+  <p class="hint">This tool is a convenience, not tax advice. Check your invoices with your chartered accountant.</p>
+
+  <h2>Related guides</h2>
+  <ul class="list">
+    <li><a href="/blog/gst-invoice-digital-marketing-services/">GST invoice for digital marketing services: SAC codes, rates and fields</a></li>
+    <li><a href="/blog/tds-on-digital-marketing-services/">TDS on digital marketing services: 194C vs 194J</a></li>
+    <li><a href="/blog/gst-input-credit-marketing-agency-expenses/">GST input tax credit on marketing agency expenses</a></li>
+    <li><a href="/blog/recurring-billing-agencies-india-razorpay/">Recurring billing for Indian agencies with Razorpay</a></li>
+    <li><a href="/blog/handle-late-paying-agency-clients/">How to handle late-paying agency clients</a></li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Which SAC code should I use for social media management services?</h3>
+    <p>Most social media management and digital marketing retainers are billed under SAC 998361, which CBIC&#x27;s classification describes as &quot;Advertising services&quot;. SAC 998365 (&quot;Sale of Internet advertising space&quot;) is for selling online ad space itself, not for your management fee. When in doubt, confirm the classification with your CA.</p>
+    <h3>When do I charge CGST + SGST and when IGST?</h3>
+    <p>Charge CGST + SGST (half the rate each) when your registered state and the place of supply are the same state, and IGST (the full rate) when they are different. For a GST-registered client, the place of supply of most services is the client&#x27;s location. In Union Territories without a legislature, UTGST replaces SGST.</p>
+    <h3>How many characters can a GST invoice number have?</h3>
+    <p>Up to 16 characters under CGST Rule 46(b). It can use letters, numbers, hyphen and slash, must be consecutive, and must be unique for the financial year. A format like INV/2026-27/001 works.</p>
+    <h3>Is TDS deducted on the GST amount?</h3>
+    <p>No, if GST is shown separately on the invoice. CBDT Circular No. 23/2017 says TDS is then deducted on the amount excluding GST. The TDS note in this generator follows that rule.</p>
+    <h3>Can I use this generator if I am not registered under GST?</h3>
+    <p>An unregistered business cannot charge GST or issue a tax invoice. It issues a bill of supply instead. You can set the GST rate to 0 here to get a plain invoice layout, but check your position with a CA first.</p>
+    <h3>Does this tool store my invoice or client data?</h3>
+    <p>No. Everything runs in your browser and nothing is uploaded. If you tick &quot;remember my agency details&quot;, your own agency details are saved in this browser&#x27;s local storage only, and you can clear them by unticking the box.</p>
+  </div>
+
+  <div class="cta">
+    <h2>Stop making invoices by hand every month.</h2>
+    <p>My Digital Sevak raises recurring GST invoices for every retainer, handles TDS, and lets clients pay in their app by UPI or card. From ₹999/month, with a 7-day money-back guarantee.</p>
+    <div class="cta-row"><a class="btn" href="/app/#signup">Get started</a><a href="#demo" class="btn ghost" data-book-demo="tool-gst-invoice-generator-cta">Book a demo</a></div>
+  </div>
+  <p style="text-align:center"><a href="/free-tools/">← All free tools</a></p>
+</main>
+<footer><div class="in">
+  <span>© 2026 Advance Media Solution · Rudrapur, Uttarakhand</span>
+  <span>
+    <a href="/">Home</a><a href="/about/">About</a><a href="/agency-management-software/">Agency Software</a>
+    <a href="/features/instagram-scheduler/">Instagram Scheduler</a><a href="/blog/">Blog</a>
+    <a href="/free-tools/">Free tools</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+  </span>
+</div></footer>
+<script src="/app/demo.js?v=1" defer></script>
+<script>
+/* pure:start */
+var GST = (function () {
+  var STATES = [["01","Jammu and Kashmir"],["02","Himachal Pradesh"],["03","Punjab"],["04","Chandigarh",1],["05","Uttarakhand"],["06","Haryana"],["07","Delhi"],["08","Rajasthan"],["09","Uttar Pradesh"],["10","Bihar"],["11","Sikkim"],["12","Arunachal Pradesh"],["13","Nagaland"],["14","Manipur"],["15","Mizoram"],["16","Tripura"],["17","Meghalaya"],["18","Assam"],["19","West Bengal"],["20","Jharkhand"],["21","Odisha"],["22","Chhattisgarh"],["23","Madhya Pradesh"],["24","Gujarat"],["26","Dadra and Nagar Haveli and Daman and Diu",1],["27","Maharashtra"],["29","Karnataka"],["30","Goa"],["31","Lakshadweep",1],["32","Kerala"],["33","Tamil Nadu"],["34","Puducherry"],["35","Andaman and Nicobar Islands",1],["36","Telangana"],["37","Andhra Pradesh"],["38","Ladakh",1],["97","Other Territory",1]];
+  var CH = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var RE = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/;
+  function find(code) { for (var i = 0; i < STATES.length; i++) if (STATES[i][0] === code) return STATES[i]; return null; }
+  function stateName(code) { var s = find(code); return s ? s[1] : ""; }
+  function isUT(code) { var s = find(code); return !!(s && s[2]); }
+  function checkChar(g14) {
+    var sum = 0;
+    for (var i = 0; i < 14; i++) {
+      var p = CH.indexOf(g14[i]) * (i % 2 ? 2 : 1);
+      sum += Math.floor(p / 36) + (p % 36);
+    }
+    return CH[(36 - (sum % 36)) % 36];
+  }
+  function validateGSTIN(raw) {
+    var g = String(raw || "").trim().toUpperCase();
+    if (!g) return { level: "", msg: "", state: "" };
+    if (g.length !== 15) return { level: "err", msg: "A GSTIN has exactly 15 characters (" + g.length + " entered).", state: "" };
+    if (!RE.test(g)) return { level: "err", msg: "Format should be: 2-digit state code + 10-character PAN + entity number + Z + check character.", state: "" };
+    var st = g.slice(0, 2);
+    if (!find(st)) return { level: "err", msg: "State code " + st + " is not a valid GST state code.", state: "" };
+    if (checkChar(g.slice(0, 14)) !== g[14]) return { level: "warn", msg: "Format is right but the check character doesn't match. Look for a typo.", state: st };
+    return { level: "ok", msg: "Valid format · " + stateName(st) + " (" + st + ")", state: st };
+  }
+  function validateInvNo(s) {
+    s = String(s || "");
+    if (!s) return { level: "err", msg: "Enter an invoice number." };
+    if (s.length > 16) return { level: "err", msg: "Max 16 characters (Rule 46(b))." };
+    if (!/^[A-Za-z0-9\/-]+$/.test(s)) return { level: "err", msg: "Use only letters, numbers, '-' and '/' (Rule 46(b))." };
+    return { level: "ok", msg: "" };
+  }
+  function r2(x) { return Math.round((Number(x) + Number.EPSILON) * 100) / 100; }
+  function num(x) { var n = parseFloat(x); return isFinite(n) ? n : 0; }
+  function calc(o) {
+    var rate = num(o.rate), taxable = 0;
+    var lines = (o.items || []).map(function (it) { var a = r2(num(it.qty) * num(it.price)); taxable += a; return a; });
+    taxable = r2(taxable);
+    var out = { lines: lines, taxable: taxable, rate: rate, mode: null, cgst: 0, sgst: 0, igst: 0, ut: false, total: taxable };
+    if (o.supplierState && o.posState) {
+      if (o.supplierState === o.posState) {
+        out.mode = "intra"; out.ut = isUT(o.posState);
+        out.cgst = r2(taxable * rate / 200); out.sgst = out.cgst;
+        out.total = r2(taxable + out.cgst + out.sgst);
+      } else {
+        out.mode = "inter"; out.igst = r2(taxable * rate / 100);
+        out.total = r2(taxable + out.igst);
+      }
+    } else {
+      out.total = r2(taxable + taxable * rate / 100);
+    }
+    return out;
+  }
+  var ONES = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+  var TENS = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+  function two(n) { return n < 20 ? ONES[n] : TENS[Math.floor(n / 10)] + (n % 10 ? " " + ONES[n % 10] : ""); }
+  function three(n) { var h = Math.floor(n / 100), r = n % 100; return (h ? ONES[h] + " Hundred" + (r ? " " : "") : "") + (r ? two(r) : ""); }
+  function intWords(n) {
+    if (n === 0) return "Zero";
+    var parts = [], crore = Math.floor(n / 1e7), lakh = Math.floor((n % 1e7) / 1e5), th = Math.floor((n % 1e5) / 1e3), rest = n % 1e3;
+    if (crore) parts.push(intWords(crore) + " Crore");
+    if (lakh) parts.push(two(lakh) + " Lakh");
+    if (th) parts.push(two(th) + " Thousand");
+    if (rest) parts.push(three(rest));
+    return parts.join(" ");
+  }
+  function words(amount) {
+    var p = Math.round(Math.abs(num(amount)) * 100), rupees = Math.floor(p / 100), paise = p % 100;
+    var s = "Rupees " + intWords(rupees);
+    if (paise) s += " and " + two(paise) + " Paise";
+    return s + " Only";
+  }
+  function money(n) { return "₹" + r2(n).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function fy(dateStr) {
+    var d = dateStr ? new Date(dateStr + "T00:00:00") : new Date();
+    var y = d.getFullYear(), start = d.getMonth() >= 3 ? y : y - 1;
+    return start + "-" + String((start + 1) % 100).padStart(2, "0");
+  }
+  return { STATES: STATES, stateName: stateName, isUT: isUT, checkChar: checkChar, validateGSTIN: validateGSTIN, validateInvNo: validateInvNo, calc: calc, words: words, money: money, r2: r2, fy: fy };
+})();
+/* pure:end */
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var LS = "mds_gst_supplier_v1";
+  var SUP = ["sName", "sGstin", "sState", "sContact", "sAddr", "sBank"];
+  var items = [];
+  function today() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function fmtDate(s) { if (!s) return ""; var p = s.split("-"); return p[2] + "/" + p[1] + "/" + p[0]; }
+  function monthLabel() { var d = new Date(); return d.toLocaleString("en-IN", { month: "long", year: "numeric" }); }
+  function defaults() {
+    items = [{ desc: "Social media management (" + monthLabel() + ")", sac: "998361", qty: 1, price: 40000 }];
+    $("invDate").value = today();
+    $("invNo").value = "INV/" + GST.fy(today()) + "/001";
+    $("gstRate").value = 18;
+  }
+  function fillStates(sel, ph) {
+    sel.innerHTML = '<option value="">' + ph + "</option>" + GST.STATES.map(function (s) { return '<option value="' + s[0] + '">' + s[0] + " · " + esc(s[1]) + "</option>"; }).join("");
+  }
+  function renderItems() {
+    $("items").innerHTML = items.map(function (it, i) {
+      var n = i + 1;
+      return '<div class="item" data-i="' + i + '">' +
+        '<div class="f desc"><label for="d' + i + '">Line ' + n + ' description</label><input type="text" id="d' + i + '" data-k="desc" value="' + esc(it.desc) + '" /></div>' +
+        '<div class="f"><label for="s' + i + '">SAC</label><input type="text" id="s' + i + '" data-k="sac" list="sacList" inputmode="numeric" maxlength="8" value="' + esc(it.sac) + '" /></div>' +
+        '<div class="f"><label for="q' + i + '">Qty</label><input type="number" id="q' + i + '" data-k="qty" min="0" step="any" inputmode="decimal" value="' + esc(it.qty) + '" /></div>' +
+        '<div class="f"><label for="p' + i + '">Rate (₹)</label><input type="number" id="p' + i + '" data-k="price" min="0" step="any" inputmode="decimal" value="' + esc(it.price) + '" /></div>' +
+        '<div class="f"><span class="amt" id="a' + i + '"></span>' + (items.length > 1 ? '<button type="button" class="btn ghost sm" data-del="' + i + '" aria-label="Remove line ' + n + '">Remove</button>' : "") + "</div></div>";
+    }).join("");
+  }
+  function setMsg(el, r) { el.textContent = r.msg || ""; el.className = "msg" + (r.level ? " " + r.level : ""); }
+  function state() {
+    return {
+      sName: $("sName").value.trim(), sGstin: $("sGstin").value.trim().toUpperCase(), sState: $("sState").value,
+      sContact: $("sContact").value.trim(), sAddr: $("sAddr").value.trim(), sBank: $("sBank").value.trim(),
+      cName: $("cName").value.trim(), cGstin: $("cGstin").value.trim().toUpperCase(), pos: $("pos").value, cAddr: $("cAddr").value.trim(),
+      invNo: $("invNo").value.trim(), invDate: $("invDate").value, dueDate: $("dueDate").value, rate: $("gstRate").value, rcm: $("rcm").value,
+      tdsOn: $("tdsOn").checked, tdsRate: $("tdsRate").value, notes: $("notes").value.trim()
+    };
+  }
+  function ph(v, label) { return v ? esc(v) : '<span class="ph">' + label + "</span>"; }
+  function render() {
+    var s = state();
+    var c = GST.calc({ items: items, rate: s.rate, supplierState: s.sState, posState: s.pos });
+    items.forEach(function (it, i) { var a = $("a" + i); if (a) a.textContent = GST.money(c.lines[i]); });
+    var warn = [];
+    if (!s.sGstin) warn.push("A tax invoice must show your GSTIN (Rule 46(a)).");
+    if (!s.sState || !s.pos) warn.push("Choose your state and the place of supply to split GST into CGST + SGST or IGST.");
+    if (!s.cGstin && c.taxable >= 50000 && (!s.cName || !s.cAddr || !s.pos)) warn.push("For an unregistered client and a taxable value of ₹50,000 or more, the client's name, address and state are required (Rule 46(e)).");
+    $("formMsg").textContent = warn.join(" ");
+    var rows = items.map(function (it, i) {
+      return "<tr><td>" + (i + 1) + "</td><td>" + ph(it.desc, "Description") + "</td><td>" + esc(it.sac) + '</td><td class="num">' + esc(it.qty) + '</td><td class="num">' + GST.money(it.price || 0) + '</td><td class="num">' + GST.money(c.lines[i]) + "</td></tr>";
+    }).join("");
+    var half = GST.r2(c.rate / 2), taxRows;
+    if (c.mode === "intra") taxRows = "<tr><td>CGST @ " + half + '%</td><td class="num">' + GST.money(c.cgst) + "</td></tr><tr><td>" + (c.ut ? "UTGST" : "SGST") + " @ " + half + '%</td><td class="num">' + GST.money(c.sgst) + "</td></tr>";
+    else if (c.mode === "inter") taxRows = "<tr><td>IGST @ " + c.rate + '%</td><td class="num">' + GST.money(c.igst) + "</td></tr>";
+    else taxRows = "<tr><td>GST @ " + c.rate + '% <span class="ph">(choose states to split)</span></td><td class="num">' + GST.money(c.total - c.taxable) + "</td></tr>";
+    var tds = "";
+    if (s.tdsOn && parseFloat(s.tdsRate) > 0) {
+      var t = GST.r2(c.taxable * parseFloat(s.tdsRate) / 100);
+      tds = '<div class="note"><b>TDS note:</b> TDS, if deductible, applies to the taxable value of ' + GST.money(c.taxable) + " excluding GST (CBDT Circular No. 23/2017). At " + esc(s.tdsRate) + "%, TDS = " + GST.money(t) + "; net amount receivable = " + GST.money(c.total - t) + ".</div>";
+    }
+    var posLine = s.pos ? esc(GST.stateName(s.pos)) + " (" + s.pos + ")" : '<span class="ph">Select</span>';
+    $("invoice").innerHTML =
+      '<div class="inv-top"><div><p class="ttl">TAX INVOICE</p><p class="sup">' + ph(s.sName, "Your agency name") + "</p>" +
+      (s.sAddr ? "<pre>" + esc(s.sAddr) + "</pre>" : '<p class="ph">Your address</p>') +
+      "<p>GSTIN: " + ph(s.sGstin, "your GSTIN") + "</p>" +
+      "<p>State: " + (s.sState ? esc(GST.stateName(s.sState)) + " (" + s.sState + ")" : '<span class="ph">Select</span>') + "</p>" +
+      (s.sContact ? '<p class="muted">' + esc(s.sContact) + "</p>" : "") + "</div>" +
+      '<div class="meta"><div><span>Invoice no.</span><b>' + ph(s.invNo, "-") + "</b></div><div><span>Date</span><b>" + esc(fmtDate(s.invDate)) + "</b></div>" +
+      (s.dueDate ? "<div><span>Due date</span><b>" + esc(fmtDate(s.dueDate)) + "</b></div>" : "") +
+      "<div><span>Place of supply</span><b>" + posLine + "</b></div><div><span>Reverse charge</span><b>" + esc(s.rcm) + "</b></div></div></div>" +
+      '<div class="parties"><div><p class="lab">Bill to</p><p class="sup" style="font-size:14.5px">' + ph(s.cName, "Client name") + "</p>" +
+      (s.cAddr ? "<pre>" + esc(s.cAddr) + "</pre>" : '<p class="ph">Client address</p>') +
+      "<p>GSTIN: " + (s.cGstin ? esc(s.cGstin) : "Unregistered") + "</p>" +
+      "<p>State: " + posLine + "</p></div></div>" +
+      '<div class="twrap"><table><thead><tr><th>#</th><th>Description of service</th><th>SAC</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Taxable value</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+      '<div class="tot"><table><tr><td>Taxable value</td><td class="num">' + GST.money(c.taxable) + "</td></tr>" + taxRows +
+      '<tr class="grand"><td>Total invoice value</td><td class="num">' + GST.money(c.total) + "</td></tr></table></div>" +
+      '<p class="words">' + esc(GST.words(c.total)) + "</p>" + tds +
+      '<div class="foot"><div>' + (s.sBank ? '<p class="lab">Payment details</p><pre>' + esc(s.sBank) + "</pre>" : "") +
+      (s.notes ? '<p class="lab" style="margin-top:8px">Notes</p><pre>' + esc(s.notes) + "</pre>" : "") + "</div>" +
+      '<div class="sign"><p>For ' + ph(s.sName, "Your agency name") + '</p><p class="line">Authorised signatory</p></div></div>';
+    save();
+  }
+  function save() {
+    try {
+      if ($("remember").checked) {
+        var o = {}; SUP.forEach(function (k) { o[k] = $(k).value; }); localStorage.setItem(LS, JSON.stringify(o));
+      }
+    } catch (e) {}
+  }
+  function load() {
+    try {
+      var o = JSON.parse(localStorage.getItem(LS) || "null");
+      if (o) { SUP.forEach(function (k) { if (o[k] != null) $(k).value = o[k]; }); $("remember").checked = true; }
+    } catch (e) {}
+  }
+  function gstinField(inp, msgEl, stateSel) {
+    var r = GST.validateGSTIN(inp.value);
+    setMsg(msgEl, r);
+    if (r.state && stateSel) stateSel.value = r.state;
+  }
+  function printInvoice() {
+    var root = $("print-root");
+    if (!root) { root = document.createElement("div"); root.id = "print-root"; document.body.appendChild(root); }
+    var clone = $("invoice").cloneNode(true); clone.removeAttribute("id");
+    root.innerHTML = ""; root.appendChild(clone);
+  }
+
+  fillStates($("sState"), "Select your state");
+  fillStates($("pos"), "Select client's state");
+  defaults();
+  load();
+  renderItems();
+  ["sGstin", "cGstin"].forEach(function (id) {
+    var el = $(id);
+    el.addEventListener("input", function () { var p = el.selectionStart; el.value = el.value.toUpperCase(); try { el.setSelectionRange(p, p); } catch (e) {} });
+  });
+  $("gstForm").addEventListener("input", function (e) {
+    var t = e.target, row = t.closest && t.closest(".item");
+    if (row && t.dataset.k) {
+      var i = +row.dataset.i;
+      items[i][t.dataset.k] = (t.dataset.k === "qty" || t.dataset.k === "price") ? t.value : t.value;
+    }
+    if (t.id === "sGstin") gstinField(t, $("sGstinMsg"), $("sState"));
+    if (t.id === "cGstin") gstinField(t, $("cGstinMsg"), $("pos"));
+    if (t.id === "invNo") setMsg($("invNoMsg"), GST.validateInvNo(t.value));
+    render();
+  });
+  $("gstForm").addEventListener("change", function (e) {
+    if (e.target.id === "tdsOn") $("tdsRate").disabled = !e.target.checked;
+    if (e.target.id === "remember" && !e.target.checked) { try { localStorage.removeItem(LS); } catch (x) {} }
+    render();
+  });
+  $("items").addEventListener("click", function (e) {
+    var d = e.target.closest && e.target.closest("[data-del]");
+    if (!d) return;
+    items.splice(+d.dataset.del, 1); renderItems(); render();
+  });
+  $("addItem").addEventListener("click", function () {
+    items.push({ desc: "", sac: "998361", qty: 1, price: 0 }); renderItems(); render();
+    var last = $("d" + (items.length - 1)); if (last) last.focus();
+  });
+  $("resetBtn").addEventListener("click", function () {
+    if (!confirm("Clear the client, invoice and line items? Your remembered agency details stay.")) return;
+    ["cName", "cGstin", "cAddr", "dueDate", "notes", "tdsRate"].forEach(function (k) { $(k).value = ""; });
+    $("pos").value = ""; $("rcm").value = "No"; $("tdsOn").checked = false; $("tdsRate").disabled = true;
+    setMsg($("cGstinMsg"), {}); defaults(); renderItems(); render();
+  });
+  $("printBtn").addEventListener("click", function () { printInvoice(); window.print(); });
+  window.addEventListener("beforeprint", printInvoice);
+  if ($("sGstin").value) gstinField($("sGstin"), $("sGstinMsg"), null);
+  render();
+})();
+</script>
+</body>
+</html>
