@@ -1,0 +1,29 @@
+# Netlify edge headers for the COMBINED site (marketing at "/", app at "/app/").
+# Netlify only honors _headers/_redirects at the publish ROOT, so the app's
+# cache rules live here too, prefixed with /app/.
+# Always revalidate the SPA shells + service workers so a new deploy reaches
+# every user on next refresh — no stale tabs serving last week's code.
+
+# --- Marketing (root) ---
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# --- App (/app/) ---
+/app/
+  Cache-Control: no-cache, no-store, must-revalidate
+/app/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/app/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Static assets keep normal caching (versioned by filename / immutable).
+/app/icon.svg
+  Cache-Control: public, max-age=86400
+/app/icon-maskable.svg
+  Cache-Control: public, max-age=86400
+/app/manifest.webmanifest
+  Cache-Control: public, max-age=3600
