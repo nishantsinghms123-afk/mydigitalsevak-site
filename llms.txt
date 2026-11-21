@@ -1,0 +1,38 @@
+# My Digital Sevak
+
+> My Digital Sevak is agency management software for social media marketing agencies in India, built by Advance Media Solution (Rudrapur, Uttarakhand), an agency that has worked with 63+ brands. One workspace runs content planning, client approvals, Instagram and Facebook auto-publishing, team tasks, SEO tracking, monthly client reports and GST billing. Clients approve posts and pay invoices from their own mobile app.
+
+Key facts:
+
+- Pricing (billed monthly, in INR, by card or UPI; no annual plan): Starter ₹999/month (up to 10 clients, 5 team members), Growth ₹1,499/month (up to 30 clients, 15 team members), Agency ₹2,499/month (unlimited clients and team members). Every plan includes the client app and auto-publishing.
+- 7-day money-back guarantee on the first payment; cancel anytime.
+- Founding-member pricing: early-access agencies lock in their price forever.
+- Works in the browser; the client app is an installable web app (PWA) on Android and iOS, no app store needed.
+- Built for India: GST and TDS on invoices, payments via Razorpay (UPI and cards), WhatsApp reminders, prices in rupees.
+- Founder: Nishant Singh. Contact: nishant@advancemediasolution.com.
+
+## Product
+
+- [Home and pricing](https://mydigitalsevak.in/): overview, pricing and FAQ
+- [Agency management software](https://mydigitalsevak.in/agency-management-software/): what the category is and how My Digital Sevak fits
+- [All features](https://mydigitalsevak.in/features/)
+- [Team workspace](https://mydigitalsevak.in/features/team-workspace/): tasks in List, Board, Calendar, Table, Gantt and Workload views, automations, docs, forms, goals and team chat
+- [WhatsApp task reminders](https://mydigitalsevak.in/features/whatsapp-task-reminders/): the team gets a WhatsApp message before a task is due
+- [Timesheets](https://mydigitalsevak.in/features/timesheets/): billable time that can go onto a GST invoice
+- [Client approval app](https://mydigitalsevak.in/features/client-approval-app/): clients approve posts in one tap, leave remarks and pay invoices
+- [GST invoicing](https://mydigitalsevak.in/features/gst-invoicing/): GST and TDS invoices, recurring retainers, Razorpay payments
+- [Instagram scheduler](https://mydigitalsevak.in/features/instagram-scheduler/): schedule reels, carousels and posts; approved posts publish automatically
+- [AI video editor](https://mydigitalsevak.in/ai-video-editor/)
+- [About](https://mydigitalsevak.in/about/): who built it and why
+
+## Guides
+
+- [Blog](https://mydigitalsevak.in/blog/): guides on running a social media agency in India (pricing, approvals, GST, operations, Instagram)
+- [City guides](https://mydigitalsevak.in/agencies/): social media agency pricing and how to choose one, city by city
+- [Free tools](https://mydigitalsevak.in/free-tools/): GST invoice generator, social media pricing calculator, content calendar generator
+
+## Optional
+
+- [Terms](https://mydigitalsevak.in/terms.html)
+- [Privacy](https://mydigitalsevak.in/privacy.html)
+- [Refund policy](https://mydigitalsevak.in/refund.html)
