@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSGKNS7J31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BSGKNS7J31');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>How to Share a Content Calendar With a Client (Properly)</title>
+<meta name="description" content="PDF, view-only Google Sheet, scheduler link or client portal: how to share a content calendar with a client, what to show, what to hide, and who approves." />
+<link rel="canonical" href="https://mydigitalsevak.in/blog/share-content-calendar-with-client/" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta property="og:title" content="How to Share a Content Calendar With a Client (Properly)" />
+<meta property="og:description" content="The four ways agencies share a content calendar with clients, which one to use when, and the fields a client should never see." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mydigitalsevak.in/blog/share-content-calendar-with-client/" />
+<meta property="og:site_name" content="My Digital Sevak" />
+<meta property="og:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Share a Content Calendar With a Client (Properly)" />
+<meta name="twitter:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Share a Content Calendar With a Client (Properly)",
+  "description": "PDF, view-only Google Sheet, scheduler link or client portal: how to share a content calendar with a client, what to show, what to hide, and who approves.",
+  "datePublished": "2026-11-28",
+  "dateModified": "2026-11-28",
+  "author": { "@type": "Person", "name": "Nishant Singh", "url": "https://mydigitalsevak.in/about/", "jobTitle": "Founder, My Digital Sevak" },
+  "publisher": { "@type": "Organization", "name": "My Digital Sevak", "logo": { "@type": "ImageObject", "url": "https://mydigitalsevak.in/assets/icon-512.png" } },
+  "mainEntityOfPage": "https://mydigitalsevak.in/blog/share-content-calendar-with-client/",
+  "image": "https://mydigitalsevak.in/assets/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mydigitalsevak.in/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mydigitalsevak.in/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Share a Content Calendar With a Client", "item": "https://mydigitalsevak.in/blog/share-content-calendar-with-client/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I give a client edit access to the content calendar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Give view or comment access only. A client with edit rights will move dates, delete rows and rewrite captions without telling the team, and you lose track of what was agreed. Let them comment or approve, and let your team make the change so there is one owner of the calendar." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a PDF or a live link better for sharing a content calendar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use both, for different jobs. A PDF is right for the monthly plan sign-off because it is a fixed record of what the client agreed to. A live link or portal is right for the rest of the month, because dates and statuses change and a PDF goes out of date the day after you send it." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a client see other clients in a shared Google Sheet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you share your master sheet. Google Sheets shares the whole file, so every tab inside it is visible to anyone with access. Keep a separate file per client, or use a tool that shares one client's calendar at a time, and never send a link to the agency's master calendar." }
+    }
+  ]
+}
+</script>
+<!-- Fontshare: Clash Display + Satoshi -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0A0A0B;--bg2:#0E0E11;--surface:rgba(255,255,255,.03);--border:rgba(255,255,255,.09);
+--ink:#F4F4F6;--ink2:rgba(255,255,255,.82);--ink3:rgba(255,255,255,.6);
+--brand:#ff00ee;--brand-light:#FF66F5;--brand-wash:rgba(255,0,238,.12);--cyan:#46E0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Satoshi',system-ui,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:800px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .in{max-width:1060px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+nav a.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+nav a.brand img{width:34px;height:34px;border-radius:9px}
+nav .links{display:flex;gap:22px;align-items:center}
+nav .links a{color:var(--ink3);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--brand-light)}
+.btn{display:inline-block;background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;font-weight:700;
+padding:13px 26px;border-radius:12px;text-decoration:none;box-shadow:0 6px 30px rgba(255,0,238,.35)}
+.btn.ghost{background:var(--surface);border:1px solid var(--border);box-shadow:none;color:var(--ink2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+header.hero{padding:80px 0 40px;position:relative;overflow:hidden}
+.glow{position:absolute;width:720px;height:720px;border-radius:50%;top:-380px;right:-220px;pointer-events:none;
+background:radial-gradient(circle,rgba(255,0,238,.18) 0%,rgba(255,0,238,0) 62%)}
+.crumb{font-size:14px;color:var(--ink3);margin-bottom:18px}
+.crumb a{color:var(--ink3);text-decoration:none}
+.byline{font-size:14.5px;color:var(--ink3);margin-top:16px}
+.byline b{color:var(--ink2)}
+h1{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(30px,4.8vw,46px);line-height:1.12;letter-spacing:-.5px}
+h2{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(23px,3.2vw,30px);line-height:1.2;margin:56px 0 16px}
+h3{font-family:'Clash Display',sans-serif;font-weight:600;font-size:19px;margin:30px 0 8px}
+p{margin-bottom:16px;color:var(--ink2)}
+a{color:var(--brand-light)}
+.answer{background:var(--brand-wash);border:1px solid rgba(255,0,238,.25);border-radius:14px;padding:20px 22px;margin:20px 0;color:var(--ink)}
+ul.list,ol.list{margin:0 0 18px 22px;color:var(--ink2)}
+ul.list li,ol.list li{margin-bottom:8px}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14.5px}
+th,td{text-align:left;padding:11px 12px;border:1px solid var(--border);vertical-align:top}
+th{background:var(--surface);font-weight:700;color:var(--ink)}
+td{color:var(--ink2)}
+.twrap{overflow-x:auto}
+.tpl{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;font-size:15px;color:var(--ink2)}
+.tpl p{margin-bottom:8px}
+.tpl b{color:var(--ink)}
+.shot{margin:28px 0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--surface)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:13.5px;color:var(--ink3);padding:10px 16px;border-top:1px solid var(--border)}
+.verdict{font-size:15px;border-left:3px solid var(--brand);padding-left:14px;color:var(--ink2);margin:14px 0}
+.note{font-size:14px;color:var(--ink3)}
+.cta{margin:64px 0;background:linear-gradient(140deg,rgba(255,0,238,.16),rgba(70,224,255,.07));border:1px solid rgba(255,0,238,.3);
+border-radius:20px;padding:40px 32px;text-align:center}
+.cta h2{margin:0 0 12px}
+footer{border-top:1px solid var(--border);margin-top:80px;padding:34px 0;font-size:14px;color:var(--ink3)}
+footer .in{max-width:1060px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink3);text-decoration:none;margin-right:16px}
+@media(max-width:640px){nav .links a.hideS{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="brand" href="/"><img src="/assets/icon-192.png" alt="My Digital Sevak logo" /><span>My Digital Sevak</span></a>
+  <div class="links">
+    <a href="/agency-management-software/" class="hideS">Agency Software</a>
+    <a href="/features/instagram-scheduler/" class="hideS">Instagram Scheduler</a>
+    <a href="#demo" class="hideS" data-book-demo="blog-share-content-calendar-with-client-nav">Book a demo</a>
+    <a class="btn" href="/app/#signup">Get started</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="glow"></div><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / <a href="/blog/">Blog</a></div>
+  <h1>How to Share a Content Calendar With a Client (Properly)</h1>
+  <p class="byline">By <b><a href="/about/" style="color:inherit;text-decoration:none">Nishant Singh</a></b>, founder of My Digital Sevak — written after running a social media agency across 63+ brands · Published <b>28 Nov 2026</b></p>
+</div></header>
+
+<main class="wrap">
+  <div class="answer">Share it in two steps. At the start of the month, send a fixed PDF of the plan for sign-off. For the rest of the month, give the client a view-only live link or a client portal showing only their brand: dates, formats, topics and approval status. Never give edit access, and never share your master sheet.</div>
+
+  <p>Every agency owner knows this message. It's 10:40 PM, and the client writes on WhatsApp: "Can you send the calendar again? I can't find it." You scroll up, find the PDF you sent on the 1st, and realise half of it has changed since. Three posts moved, one festival got added, the reel on the 14th is now a carousel. So you either send an old file that's wrong, or you stop what you're doing and make a new one.</p>
+
+  <p>The problem isn't the client. It's that a content calendar is two different things at two different moments, and most agencies share it in one way for both. Here is how to split it, which method to use for each part, and what the client should and shouldn't see.</p>
+
+  <h2>What are the ways to share a content calendar with a client?</h2>
+  <p>There are four common methods. Each one is fine for something and wrong for something else:</p>
+
+  <div class="twrap">
+  <table>
+    <tr><th>Method</th><th>Stays up to date?</th><th>Client can approve in it?</th><th>Good for</th><th>Main risk</th></tr>
+    <tr><td><b>PDF or image on WhatsApp / email</b></td><td>No, it's a snapshot</td><td>Only by replying "ok"</td><td>Monthly plan sign-off, a record of what was agreed</td><td>Out of date within days; old copies keep circulating</td></tr>
+    <tr><td><b>Google Sheet, view or comment link</b></td><td>Yes</td><td>Comments only</td><td>Small agencies with a few clients</td><td>Sharing is per file, so a master sheet exposes every client</td></tr>
+    <tr><td><b>Share link from a scheduling tool</b></td><td>Yes</td><td>Often yes</td><td>Agencies already scheduling in that tool</td><td>Links can expire or differ by plan; check the tool's rules</td></tr>
+    <tr><td><b>Client portal (login or no-login link)</b></td><td>Yes</td><td>Yes, per post</td><td>Agencies with 8+ brands and real approval cycles</td><td>Some clients never open it; you still need a WhatsApp fallback</td></tr>
+  </table>
+  </div>
+
+  <p>The scheduling tools all handle this a little differently, so read the fine print. Later's Instagram share links expire after 48 hours, according to <a href="https://help.later.com/hc/articles/360042743434" rel="nofollow noopener" target="_blank">Later's help centre</a>. Metricool lets you export the calendar as a CSV, which is a static copy that won't update as you schedule (<a href="https://help.metricool.com/how-to-share-your-content-calendar-with-clients-or-collaborators-sy0yt" rel="nofollow noopener" target="_blank">Metricool help</a>). Agorapulse recommends a separate shared calendar per client (<a href="https://support.agorapulse.com/en/articles/8773595-how-do-i-create-a-shared-calendar-and-share-it-with-a-client" rel="nofollow noopener" target="_blank">Agorapulse support</a>). None of these are wrong. They just mean "send the link" is not a one-time job.</p>
+
+  <h2>Why should you share the plan and the live calendar separately?</h2>
+  <p>Because the client is answering two different questions.</p>
+  <ul class="list">
+    <li><b>At the start of the month: "Is this the right plan?"</b> They want to see the whole month at once: how many reels and statics, which festivals and offers are covered, what each post is about. This should be a fixed document, because it's what you both agreed to. When a client says in week three "we never discussed this", the signed-off PDF settles it.</li>
+    <li><b>During the month: "What's happening this week, and what do you need from me?"</b> They want the next few posts, their status, and anything waiting for their approval. This must be live. A PDF from the 1st cannot answer it.</li>
+  </ul>
+  <p>Agencies that send only the PDF end up re-sending it every week. Agencies that send only a live link get no clear sign-off, and the plan drifts. Do both, and each one gets easier. If you are still running the whole calendar in a spreadsheet, our comparison of <a href="/blog/google-sheets-vs-content-calendar-software/">Google Sheets vs content calendar software</a> covers where that starts to break.</p>
+
+  <h2>What should a client see in a shared content calendar, and what should stay hidden?</h2>
+  <p>A shared calendar is a client-facing document. Treat it like one. This is the split we use:</p>
+
+  <div class="twrap">
+  <table>
+    <tr><th>Show the client</th><th>Keep internal</th></tr>
+    <tr><td>Posting date and day</td><td>Production date (we make posts two days before they go live)</td></tr>
+    <tr><td>Platform and format: reel, static, carousel</td><td>Who on the team is making it</td></tr>
+    <tr><td>Topic or hook, in one line</td><td>Internal notes like "client is slow, push early"</td></tr>
+    <tr><td>Draft caption, once it's ready</td><td>Rough drafts and rejected ideas</td></tr>
+    <tr><td>Status: planned, being made, waiting for you, approved, scheduled, posted</td><td>Rates, hours spent, other clients' tabs</td></tr>
+    <tr><td>Reference posts, so they see the style you mean</td><td>Raw files and editing notes for the team</td></tr>
+  </table>
+  </div>
+
+  <p>The one that bites most often is the team column. A client sees "Designer: Rahul" next to a post they didn't like, and the next call is about Rahul. Keep names off the client's copy. Our longer guide on <a href="/blog/client-portal-social-media-agency/">what a client portal should show</a> goes through the rest.</p>
+
+  <h2>How do you share a Google Sheets content calendar safely?</h2>
+  <p>If a spreadsheet is what you use today, set it up like this:</p>
+  <ol class="list">
+    <li><b>One file per client.</b> Google Sheets shares the whole file, not a tab. If January for six brands sits in one master sheet, sharing it with one client shares all six.</li>
+    <li><b>Share as Viewer or Commenter, never Editor.</b> Commenter is the right level for most clients: they can leave notes on a cell, but they can't move a date or delete a row.</li>
+    <li><b>Turn off download, print and copy for viewers</b> in the share settings, if the calendar has anything you'd rather not see forwarded.</li>
+    <li><b>Freeze the header row and add a Status column</b> with a dropdown, so the client can scan what is waiting for them.</li>
+    <li><b>Pin the link</b> in the client's WhatsApp group description, so "send the calendar again" is answered without you.</li>
+    <li><b>Still send a PDF of the month's plan</b> on the 1st, for the sign-off record.</li>
+  </ol>
+  <div class="verdict">If a client can drag a post to a new date in your calendar, you no longer own the calendar.</div>
+
+  <h2>How we share calendars with our own clients</h2>
+  <p>At our agency, every brand gets its month in two forms. First, a plan page at the start of the month: every post with its date, format, topic, script or slide outline, and reference posts, sent as a PDF for sign-off. Second, the live calendar in the client portal of <a href="/agency-management-software/">My Digital Sevak</a>, which is what we built for exactly this job.</p>
+  <p>In the portal, the client sees a month view of their own brand only, with each post's status. For brands that like to see ideas early, we switch on a Plan view: posts the team has planned but not made yet appear in the calendar read-only, marked "Planned" or "Being made", with the topic, script, caption and references. They can read the idea, but approval happens on the finished post, not the idea. When a post is ready, the client approves it or asks for changes, typing a comment and attaching up to six images if they want to show what they mean. Once approved, it can be <a href="/features/instagram-scheduler/">scheduled to publish on Instagram</a> without anyone sharing a password.</p>
+
+  <figure class="shot">
+  <img src="/assets/app-portal-phone.webp" alt="Client portal on a phone showing a shared content calendar with post statuses and approvals for one brand" loading="lazy" />
+  <figcaption>The client portal on a phone: one brand's calendar, the status of each post, and the posts waiting for the client's approval.</figcaption>
+  </figure>
+
+  <p>For clients who will never log in to anything, and every agency has a few, the team can send a post on WhatsApp with the actual file attached and a review link that opens without a login, with Approve and Changes buttons. The client stays in WhatsApp; the answer still lands on the post. That's the part of <a href="/features/client-approval-app/">our client approval app</a> that saved us the most late-night messages. The full approval flow is in our <a href="/blog/social-media-content-approval-workflow-template/">content approval workflow template</a>.</p>
+
+  <h2>Five mistakes when sharing a content calendar</h2>
+  <ol class="list">
+    <li><b>Sharing the master sheet.</b> One wrong link and a client sees a competitor's plan.</li>
+    <li><b>Edit access "to make it easy".</b> It makes it easy for the calendar to change without anyone knowing.</li>
+    <li><b>No sign-off on the plan.</b> Without a fixed record, scope creep has nothing to push against. Our guide to <a href="/blog/manage-client-expectations-social-media-agency/">managing client expectations</a> covers that kickoff conversation.</li>
+    <li><b>Internal notes left in.</b> Production dates, maker names and "TBD, ask Sir" all leak into client copies when one file does both jobs.</li>
+    <li><b>Asking for approval in five places.</b> Calendar comments, email, WhatsApp, a call and a voice note. Pick one place where approval counts, and say so on day one.</li>
+  </ol>
+  <p>Agencies we talk to in <a href="/agencies/lucknow/">Lucknow</a> and across tier-2 India mostly start with the PDF-plus-WhatsApp method. That's fine for three clients. By ten, the weekly "send it again" messages are the signal to move the live part somewhere that updates itself.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>Should I give a client edit access to the content calendar?</h3>
+  <p>No. Give view or comment access only. A client with edit rights will move dates, delete rows and rewrite captions without telling the team, and you lose track of what was agreed. Let them comment or approve, and let your team make the change so there is one owner of the calendar.</p>
+
+  <h3>Is a PDF or a live link better for sharing a content calendar?</h3>
+  <p>Use both, for different jobs. A PDF is right for the monthly plan sign-off because it is a fixed record of what the client agreed to. A live link or portal is right for the rest of the month, because dates and statuses change and a PDF goes out of date the day after you send it.</p>
+
+  <h3>Can a client see other clients in a shared Google Sheet?</h3>
+  <p>Yes, if you share your master sheet. Google Sheets shares the whole file, so every tab inside it is visible to anyone with access. Keep a separate file per client, or use a tool that shares one client's calendar at a time, and never send a link to the agency's master calendar.</p>
+
+  <p class="note">Sources checked on 28 November 2026: Later, Metricool and Agorapulse help-centre pages on sharing calendars with clients. Share-link rules change with plans and product updates; check your own tool before relying on a link for a whole month.</p>
+
+  <div class="cta">
+    <h2>One calendar per client, always up to date</h2>
+    <p>A client portal where each brand sees its own calendar, approves finished posts, and gets a no-login review link on WhatsApp, next to your team's tasks and Instagram publishing in one <a href="/agency-management-software/">agency workspace</a>. From ₹999/month. Try it free for 3 days, no card needed, with a 7-day money-back guarantee.</p>
+    <div class="cta-row"><a class="btn" href="/app/#signup">Get started</a><a href="#demo" class="btn ghost" data-book-demo="blog-share-content-calendar-with-client-cta">Book a demo</a></div>
+  </div>
+<!-- related:start -->
+  <section class="related" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
+    <h2 style="margin-top:0">Related guides</h2>
+    <ul style="padding-left:20px">
+    <li><a href="/blog/handle-client-revisions-social-media-content/">How to Handle Client Revisions on Social Media Content</a></li>
+    <li><a href="/blog/ai-content-calendar-generator-social-media/">AI Content Calendar Generator for Social Media (Free Prompt)</a></li>
+    <li><a href="/blog/client-approval-app-marketing-agencies/">Client Approval App for Marketing Agencies (2026)</a></li>
+    <li><a href="/blog/client-offboarding-checklist-marketing-agency/">Client Offboarding Checklist for Marketing Agencies (India)</a></li>
+    </ul>
+  </section>
+<!-- related:end -->
+</main>
+
+<footer><div class="in">
+  <span>© 2026 Advance Media Solution · Rudrapur, Uttarakhand</span>
+  <span>
+    <a href="/">Home</a><a href="/agency-management-software/">Agency Management Software</a>
+    <a href="/features/instagram-scheduler/">Instagram Scheduler</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+  </span>
+</div></footer>
+<script src="/app/demo.js?v=1" defer></script>
+<script src="/assets/buybar.js?v=1" defer></script>
+</body>
+</html>

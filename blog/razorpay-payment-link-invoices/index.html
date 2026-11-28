@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSGKNS7J31"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BSGKNS7J31');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Razorpay Payment Link for Invoices: An Agency's Setup Guide</title>
+<meta name="description" content="Send a Razorpay payment link with every invoice: the right amount after TDS, invoice number as reference, expiry, part-payments, reminders and fees." />
+<link rel="canonical" href="https://mydigitalsevak.in/blog/razorpay-payment-link-invoices/" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="icon" href="/assets/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta property="og:title" content="Razorpay Payment Link for Invoices: An Agency's Setup Guide" />
+<meta property="og:description" content="How to get paid by UPI or card straight from an invoice: which amount to charge after TDS, the settings that matter, what Razorpay costs, and five mistakes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mydigitalsevak.in/blog/razorpay-payment-link-invoices/" />
+<meta property="og:site_name" content="My Digital Sevak" />
+<meta property="og:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Razorpay Payment Link for Invoices: An Agency's Setup Guide" />
+<meta name="twitter:image" content="https://mydigitalsevak.in/assets/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Razorpay Payment Link for Invoices: An Agency's Setup Guide",
+  "description": "Send a Razorpay payment link with every invoice: the right amount after TDS, invoice number as reference, expiry, part-payments, reminders and fees.",
+  "datePublished": "2026-11-27",
+  "dateModified": "2026-11-27",
+  "author": { "@type": "Person", "name": "Nishant Singh", "url": "https://mydigitalsevak.in/about/", "jobTitle": "Founder, My Digital Sevak" },
+  "publisher": { "@type": "Organization", "name": "My Digital Sevak", "logo": { "@type": "ImageObject", "url": "https://mydigitalsevak.in/assets/icon-512.png" } },
+  "mainEntityOfPage": "https://mydigitalsevak.in/blog/razorpay-payment-link-invoices/",
+  "image": "https://mydigitalsevak.in/assets/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mydigitalsevak.in/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mydigitalsevak.in/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Razorpay Payment Link for Invoices", "item": "https://mydigitalsevak.in/blog/razorpay-payment-link-invoices/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a Razorpay payment link a valid GST invoice?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. A payment link only collects money. Your client's accounts team still needs your tax invoice with your GSTIN, their GSTIN, the SAC code and the tax split to book the expense and claim input credit. Send the invoice PDF and the link together, and put the invoice number on the link so the payment can be matched." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Razorpay charge on a payment link?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Payment links follow Razorpay's standard gateway pricing: 2% per transaction on most domestic methods, including UPI, plus 18% GST on that fee. On ₹58,000 that is ₹1,160 plus ₹208.80 GST. Money usually settles to your bank in two working days. Check razorpay.com/pricing for your plan's current rates." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should the payment link be for the full invoice amount?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not if the client deducts TDS. A business client will pay the invoice total minus the TDS they withhold, so a link for the gross amount will either fail their approval or get paid short. Make the link for the net amount the client actually owes, and show gross, TDS and net on the invoice itself." }
+    }
+  ]
+}
+</script>
+<!-- Fontshare: Clash Display + Satoshi -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0A0A0B;--bg2:#0E0E11;--surface:rgba(255,255,255,.03);--border:rgba(255,255,255,.09);
+--ink:#F4F4F6;--ink2:rgba(255,255,255,.82);--ink3:rgba(255,255,255,.6);
+--brand:#ff00ee;--brand-light:#FF66F5;--brand-wash:rgba(255,0,238,.12);--cyan:#46E0FF}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Satoshi',system-ui,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:800px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .in{max-width:1060px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+nav a.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+nav a.brand img{width:34px;height:34px;border-radius:9px}
+nav .links{display:flex;gap:22px;align-items:center}
+nav .links a{color:var(--ink3);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--brand-light)}
+.btn{display:inline-block;background:linear-gradient(100deg,var(--brand),var(--brand-light));color:#fff;font-weight:700;
+padding:13px 26px;border-radius:12px;text-decoration:none;box-shadow:0 6px 30px rgba(255,0,238,.35)}
+.btn.ghost{background:var(--surface);border:1px solid var(--border);box-shadow:none;color:var(--ink2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+header.hero{padding:80px 0 40px;position:relative;overflow:hidden}
+.glow{position:absolute;width:720px;height:720px;border-radius:50%;top:-380px;right:-220px;pointer-events:none;
+background:radial-gradient(circle,rgba(255,0,238,.18) 0%,rgba(255,0,238,0) 62%)}
+.crumb{font-size:14px;color:var(--ink3);margin-bottom:18px}
+.crumb a{color:var(--ink3);text-decoration:none}
+.byline{font-size:14.5px;color:var(--ink3);margin-top:16px}
+.byline b{color:var(--ink2)}
+h1{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(30px,4.8vw,46px);line-height:1.12;letter-spacing:-.5px}
+h2{font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(23px,3.2vw,30px);line-height:1.2;margin:56px 0 16px}
+h3{font-family:'Clash Display',sans-serif;font-weight:600;font-size:19px;margin:30px 0 8px}
+p{margin-bottom:16px;color:var(--ink2)}
+a{color:var(--brand-light)}
+.answer{background:var(--brand-wash);border:1px solid rgba(255,0,238,.25);border-radius:14px;padding:20px 22px;margin:20px 0;color:var(--ink)}
+ul.list,ol.list{margin:0 0 18px 22px;color:var(--ink2)}
+ul.list li,ol.list li{margin-bottom:8px}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14.5px}
+th,td{text-align:left;padding:11px 12px;border:1px solid var(--border);vertical-align:top}
+th{background:var(--surface);font-weight:700;color:var(--ink)}
+td{color:var(--ink2)}
+.twrap{overflow-x:auto}
+.tpl{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;font-size:15px;color:var(--ink2)}
+.tpl p{margin-bottom:8px}
+.tpl b{color:var(--ink)}
+.shot{margin:28px 0;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--surface)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:13.5px;color:var(--ink3);padding:10px 16px;border-top:1px solid var(--border)}
+.verdict{font-size:15px;border-left:3px solid var(--brand);padding-left:14px;color:var(--ink2);margin:14px 0}
+.note{font-size:14px;color:var(--ink3)}
+.cta{margin:64px 0;background:linear-gradient(140deg,rgba(255,0,238,.16),rgba(70,224,255,.07));border:1px solid rgba(255,0,238,.3);
+border-radius:20px;padding:40px 32px;text-align:center}
+.cta h2{margin:0 0 12px}
+footer{border-top:1px solid var(--border);margin-top:80px;padding:34px 0;font-size:14px;color:var(--ink3)}
+footer .in{max-width:1060px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink3);text-decoration:none;margin-right:16px}
+@media(max-width:640px){nav .links a.hideS{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="brand" href="/"><img src="/assets/icon-192.png" alt="My Digital Sevak logo" /><span>My Digital Sevak</span></a>
+  <div class="links">
+    <a href="/agency-management-software/" class="hideS">Agency Software</a>
+    <a href="/features/instagram-scheduler/" class="hideS">Instagram Scheduler</a>
+    <a href="#demo" class="hideS" data-book-demo="blog-razorpay-payment-link-invoices-nav">Book a demo</a>
+    <a class="btn" href="/app/#signup">Get started</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="glow"></div><div class="wrap">
+  <div class="crumb"><a href="/">Home</a> / <a href="/blog/">Blog</a></div>
+  <h1>Razorpay Payment Link for Invoices: An Agency's Setup Guide</h1>
+  <p class="byline">By <b><a href="/about/" style="color:inherit;text-decoration:none">Nishant Singh</a></b>, founder of My Digital Sevak — written after running a social media agency across 63+ brands · Published <b>27 Nov 2026</b></p>
+</div></header>
+
+<main class="wrap">
+  <div class="answer">Create a Payment Link in the Razorpay Dashboard for what the client actually owes (invoice total minus any TDS), put the invoice number in the description and reference ID, set an expiry and reminders, and send it with the invoice PDF. The client pays by UPI, card or netbanking; Razorpay charges about 2% plus GST.</div>
+
+  <p>The slowest part of getting paid in India isn't the client's cash flow. It's the back-and-forth. "Please share the account details." "Which account, the old one?" "Is this IFSC correct?" "Sent, please check." Then a screenshot of a UPI payment that you have to match to an invoice by hand, three days later, while you're also trying to post for twelve brands.</p>
+
+  <p>A payment link cuts most of that out. The client taps once and pays the way they pay for everything else, usually UPI. But a link sent the lazy way creates new problems: wrong amounts, payments you can't match, and accounts teams who can't book the expense. Here's how to do it properly for agency invoices.</p>
+
+  <h2>What is a Razorpay Payment Link, and how is it different from Razorpay Invoices?</h2>
+  <p>Razorpay has a few ways to ask for money, and the names overlap. This is what each one is for:</p>
+
+  <div class="twrap">
+  <table>
+    <tr><th>Option</th><th>What it is</th><th>Best for</th></tr>
+    <tr><td><b>Payment Link</b></td><td>A short link for one fixed amount, sent by SMS, email or WhatsApp. No website needed.</td><td>Collecting one invoice you've already made elsewhere</td></tr>
+    <tr><td><b>Razorpay Invoices</b></td><td>Razorpay creates the GST invoice itself, with a payment link inside it (<a href="https://razorpay.com/invoices" rel="nofollow noopener" target="_blank">Razorpay Invoices</a>)</td><td>Businesses with no other invoicing tool</td></tr>
+    <tr><td><b>Payment Page</b></td><td>A reusable page where the customer enters details and pays</td><td>Fixed packages, workshops, open-ended fees</td></tr>
+    <tr><td><b>Pay button in your own invoice or portal</b></td><td>Your billing tool opens Razorpay checkout for that exact invoice</td><td>Agencies billing many clients every month</td></tr>
+  </table>
+  </div>
+
+  <p>If you already make invoices in Tally, Zoho, a spreadsheet or agency software, the Payment Link is the one you want: your invoice stays the official document, and the link only collects the money. (Developers note: Razorpay's old <code>v1/invoices</code> endpoint for links has been replaced by <code>v1/payment_links</code>, per <a href="https://razorpay.com/docs/payments/payment-links/" rel="nofollow noopener" target="_blank">Razorpay's Payment Links docs</a>.)</p>
+
+  <h2>How do you create a payment link for an invoice?</h2>
+  <p>In the Razorpay Dashboard, open Payment Links and choose Create Payment Link. Then fill it in like this:</p>
+  <ol class="list">
+    <li><b>Amount:</b> what the client owes after TDS (more on this below), not automatically the invoice total.</li>
+    <li><b>Payment for / description:</b> the invoice number, the month and the service. "INV A-0142 · November 2026 social media retainer". This is what the client sees, and what you search for later.</li>
+    <li><b>Reference ID:</b> the invoice number again. It makes every payment report and settlement easy to match back.</li>
+    <li><b>Customer details:</b> the person who actually approves payments, not the brand owner if the owner never pays. Usually the accounts person's phone and email.</li>
+    <li><b>Expiry:</b> a few days after the due date. An old link that someone pays twice six months later is a refund you didn't need.</li>
+    <li><b>Partial payments:</b> turn this on if the client sometimes pays in two parts. It only works on standard links, and the client can pay the balance later on the same link (<a href="https://razorpay.com/docs/payments/payment-links/partial-payments.md" rel="nofollow noopener" target="_blank">Razorpay docs</a>).</li>
+    <li><b>Reminders:</b> Razorpay can send up to three reminders by SMS, email or both, timed before the expiry date (<a href="https://razorpay.com/docs/payments/payment-links/reminders.md" rel="nofollow noopener" target="_blank">Razorpay reminders</a>).</li>
+  </ol>
+  <p>Then copy the short link and send it along with the invoice PDF. Razorpay can also text and email it to the client directly. You'll get a notification the moment it's paid.</p>
+
+  <h2>What amount should the payment link be for?</h2>
+  <p>This is the mistake that turns a convenience into a dispute. Most business clients deduct TDS before paying you. Take a typical retainer:</p>
+
+  <div class="twrap">
+  <table>
+    <tr><th>Line</th><th>Amount</th></tr>
+    <tr><td>Retainer fee</td><td>₹50,000</td></tr>
+    <tr><td>GST at 18%</td><td>₹9,000</td></tr>
+    <tr><td><b>Invoice total</b></td><td><b>₹59,000</b></td></tr>
+    <tr><td>TDS at 2%, on the value before GST</td><td>− ₹1,000</td></tr>
+    <tr><td><b>Amount the client pays you (link amount)</b></td><td><b>₹58,000</b></td></tr>
+  </table>
+  </div>
+
+  <p>If you send a link for ₹59,000, the accounts team either holds it ("we can't pay the gross, we have to deduct TDS") or pays it and then deducts the ₹1,000 from next month. Both are messier than simply asking for ₹58,000 and showing gross, TDS and net on the invoice. Which TDS rate applies to your work, 1%, 2% or 10%, is covered in our guide to <a href="/blog/tds-on-digital-marketing-services/">TDS on digital marketing services</a>.</p>
+  <p>For individual clients and small shops who don't deduct TDS, the link is simply the invoice total.</p>
+
+  <h2>What does a Razorpay payment link cost?</h2>
+  <p>Payment links use Razorpay's normal gateway pricing. On the standard plan, most domestic methods, UPI included, cost 2% of the payment plus 18% GST on that fee, and domestic money usually settles to your bank in two working days (<a href="https://razorpay.com/blog/razorpay-payment-gateway-pricing-explained/" rel="nofollow noopener" target="_blank">Razorpay's pricing explainer</a>). Some methods cost more, so check <a href="https://razorpay.com/pricing/" rel="nofollow noopener" target="_blank">the pricing page</a> for your account.</p>
+  <p>On the ₹58,000 example: ₹1,160 fee plus ₹208.80 GST, so ₹56,631.20 reaches your bank. Two things worth knowing:</p>
+  <ul class="list">
+    <li><b>The GST on the fee is input credit.</b> If you're GST-registered, claim it like any other business expense; we cover that in <a href="/blog/gst-input-credit-marketing-agency-expenses/">GST input credit for agency expenses</a>.</li>
+    <li><b>Don't add a "convenience fee" to retainers.</b> You can, but on a ₹50,000 retainer it reads as nickel-and-diming. Price the 2% into your fee and keep bank transfer available for clients who prefer it.</li>
+  </ul>
+  <div class="verdict">A 2% fee that gets you paid on day 3 instead of day 25 is cheaper than the month of chasing it replaces.</div>
+
+  <h2>Five payment-link mistakes agencies make</h2>
+  <ol class="list">
+    <li><b>Sending a link without the invoice.</b> A payment link is not a tax invoice. The client's accounts team needs your GSTIN, their GSTIN, the SAC code and the tax split to book the expense and claim credit. Our <a href="/blog/gst-invoice-digital-marketing-services/">GST invoice guide</a> has the full list.</li>
+    <li><b>No invoice number on the link.</b> When five clients pay ₹25,000 in the same week, "Payment from Rahul" tells you nothing.</li>
+    <li><b>Charging the gross when the client deducts TDS.</b> See the table above.</li>
+    <li><b>Links that never expire.</b> Old links get found in WhatsApp search and paid again.</li>
+    <li><b>Marking the invoice paid by hand from a screenshot.</b> Wait for the payment to show in Razorpay, then record it against the invoice. Screenshots get edited, and payments fail after the screenshot is taken.</li>
+  </ol>
+
+  <h2>Should you send links, or put a pay button on the invoice?</h2>
+  <p>Links are perfect when you bill a few clients, or one client once. They get painful at ten or twenty retainers a month: you're making each link by hand, copying amounts from your invoice, and matching payments back yourself. At that point the payment should be attached to the invoice itself, so the amount, the reference and the "paid" status all come from the same place.</p>
+  <p>That's how we run it in <a href="/features/gst-invoicing/">My Digital Sevak's GST invoicing</a>. We don't make separate links. The invoice email carries a "View invoice in your portal" button plus bank and UPI details for clients who prefer a transfer. In the client's portal, the pay button opens Razorpay checkout for the balance still due, already net of TDS and of anything paid earlier. Clients can pay the full balance or a part (Razorpay's minimum is ₹100). When the payment goes through, Razorpay tells our system, the invoice is marked paid or part-paid, and admins and managers get a notification.</p>
+
+  <figure class="shot">
+  <img src="/assets/app-portal-phone.webp" alt="Client portal on a phone where brands approve posts and pay invoices through Razorpay instead of a separate payment link" loading="lazy" />
+  <figcaption>The client portal on a phone. The same app where brands approve their posts is where they open their invoices and pay by Razorpay.</figcaption>
+  </figure>
+
+  <p>The honest limit: some clients will never open a portal, and that's fine. For them, a Razorpay payment link on WhatsApp, made the way described above, works well. If you're moving retainers to automatic monthly billing, read <a href="/blog/recurring-billing-agencies-india-razorpay/">recurring billing with Razorpay</a> first, because auto-debit has limits that a payment link doesn't. And if a client still pays late with a link in hand, the problem isn't the link; our guide to <a href="/blog/handle-late-paying-agency-clients/">handling late-paying clients</a> covers what to do. Agencies in <a href="/agencies/pune/">Pune</a> and across India tend to find the same thing: once paying is one tap, most "delays" disappear.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>Is a Razorpay payment link a valid GST invoice?</h3>
+  <p>No. A payment link only collects money. Your client's accounts team still needs your tax invoice with your GSTIN, their GSTIN, the SAC code and the tax split to book the expense and claim input credit. Send the invoice PDF and the link together, and put the invoice number on the link so the payment can be matched.</p>
+
+  <h3>How much does Razorpay charge on a payment link?</h3>
+  <p>Payment links follow Razorpay's standard gateway pricing: 2% per transaction on most domestic methods, including UPI, plus 18% GST on that fee. On ₹58,000 that is ₹1,160 plus ₹208.80 GST. Money usually settles to your bank in two working days. Check razorpay.com/pricing for your plan's current rates.</p>
+
+  <h3>Should the payment link be for the full invoice amount?</h3>
+  <p>Not if the client deducts TDS. A business client will pay the invoice total minus the TDS they withhold, so a link for the gross amount will either fail their approval or get paid short. Make the link for the net amount the client actually owes, and show gross, TDS and net on the invoice itself.</p>
+
+  <p class="note">Sources checked on 27 November 2026: Razorpay's Payment Links documentation (creating links, partial payments, reminders), Razorpay Invoices, and Razorpay's pricing explainer and pricing page. Fees and settlement times are Razorpay's standard published terms and can differ by plan; confirm on your own dashboard. TDS rates: talk to your CA for your case.</p>
+
+  <div class="cta">
+    <h2>Invoices your clients can pay in one tap</h2>
+    <p>GST invoices with TDS worked out, a Razorpay pay button in the client's portal, part-payments and automatic "paid" status, next to your calendars and approvals in one <a href="/agency-management-software/">agency workspace</a>. From ₹999/month. Try it free for 3 days, no card needed, with a 7-day money-back guarantee.</p>
+    <div class="cta-row"><a class="btn" href="/app/#signup">Get started</a><a href="#demo" class="btn ghost" data-book-demo="blog-razorpay-payment-link-invoices-cta">Book a demo</a></div>
+  </div>
+<!-- related:start -->
+  <section class="related" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
+    <h2 style="margin-top:0">Related guides</h2>
+    <ul style="padding-left:20px">
+    <li><a href="/blog/gst-advance-payment-agency-retainers/">GST on Advance Payment for Agency Retainers in India</a></li>
+    <li><a href="/blog/link-instagram-facebook-page-business/">How to Link Instagram to a Facebook Page for Business (2026)</a></li>
+    <li><a href="/blog/collect-client-social-media-passwords-safely/">How to Collect Client Social Media Passwords Safely</a></li>
+    <li><a href="/blog/notion-vs-agency-management-software/">Notion vs Agency Management Software: Where It Breaks</a></li>
+    </ul>
+  </section>
+<!-- related:end -->
+</main>
+
+<footer><div class="in">
+  <span>© 2026 Advance Media Solution · Rudrapur, Uttarakhand</span>
+  <span>
+    <a href="/">Home</a><a href="/agency-management-software/">Agency Management Software</a>
+    <a href="/features/instagram-scheduler/">Instagram Scheduler</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+  </span>
+</div></footer>
+<script src="/app/demo.js?v=1" defer></script>
+<script src="/assets/buybar.js?v=1" defer></script>
+</body>
+</html>
